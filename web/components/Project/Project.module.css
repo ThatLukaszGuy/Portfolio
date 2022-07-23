@@ -1,0 +1,79 @@
+.csd {
+    position: absolute;
+    top: calc(400px - 2px);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0;
+}
+
+.csd svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 166px;
+    z-index: 0;
+}
+
+.csd .sf {
+    fill: #2f3136;
+}
+
+.bannerBG {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    width: 100vw;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1024%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(47%2c 49%2c 54%2c 1)'%3e%3c/rect%3e%3cpath d='M23 63L-638 62' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1113 117L2058 116' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1391 61L957 60' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M356 439L-647 438' stroke-width='8' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M715 165L1630 164' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M813 23L-178 22' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1331 131L736 130' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M56 286L738 285' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M517 422L984 421' stroke-width='8' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M393 114L-599 113' stroke-width='6' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M497 342L1321 341' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1201 169L2168 168' stroke-width='6' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M909 153L1507 152' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M714 498L-32 497' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1024'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1025'%3e%3cstop stop-color='rgba(79%2c 84%2c 92%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 84%2c 92%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='0%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1026'%3e%3cstop stop-color='rgba(79%2c 84%2c 92%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 84%2c 92%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.csd2 {
+    position: absolute;
+    bottom: 270px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+} 
+
+.csd2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 138px;
+}
+
+.csd2 .sf2 {
+    fill: #4f545c;
+}
+
+.descBG {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    width: 100vw;
+    background-image: url('/images/wave-haikei2.svg');
+    z-index: 10;
+}
+
+.stack {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    width: 100vw;
+    background-image: url('/images/haikei-wave-3.svg');
+    z-index: 10;
+}
+
+@media only screen and (max-width: 48em) {
+    .csd2 {
+        bottom: 350px;
+    }
+}

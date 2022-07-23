@@ -1,0 +1,23 @@
+body {
+    margin: 0!important;
+    padding: 0!important;
+    background-color: #bcb6ff;
+}
+
+
+.customCard {
+    max-width: 70vw !important;
+}
+
+input[type=file]::file-selector-button {
+	color: white;
+	border: none;
+	border-radius: 5px;
+	background-color: #bcb6ff;
+
+}
+
+input[type=file]::file-selector-button:hover {
+	cursor: pointer;
+    background-color: #b8b1ff!important;
+}

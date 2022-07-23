@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <base href="/">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="icon" 
+    type="image/png" 
+    href="favicon/server.jpg">
+    <title>Portfolio Upload</title>
+</head>
+<body>
+    <div class="container">
+        
+        <!--Upload articles-->
+        <h1 class="text-light text-center mt-4  pt-4">Portfolio</h1>
+        
+          <section class="articles p-5 rounded bg-light mt-4 mb-5 shadow-lg" id="">
+            <h1 class="mt-1">Project Upload</h1>
+            <form action="/projects/upload"  method="post" class="form-styling"  enctype="multipart/form-data">
+                
+                <!--Name plus project info-->
+                <label for="name" class="form-label">name</label>
+                <input type="text"  id="" name="name" required class="form-control">
+                
+                <label for="info" class="form-label">info</label>
+                <textarea id="content" name="info" class="form-control" required></textarea>
+                
+                <label for="reason" class="form-label">reason</label>
+                <textarea id="content" name="reason" class="form-control" required></textarea>
+
+                <label for="difficulties" class="form-label">difficulties</label>
+                <textarea id="content" name="difficulties" class="form-control" required></textarea>
+                
+                <!--Links-->
+                <label for="github" class="form-label">github repo link</label>
+                <input type="text"  id="" name="github" required class="form-control">
+
+                <label for="deployment"class="form-label">deployment</label>
+                <input type="text"  id="" name="deployment" required class="form-control mb-3" >
+
+                <!--images-->
+                
+                    <!--cover-->
+                    <label for="coverImage" class="form-label">Upload Cover</label>
+                    <input type="file" 
+                        name="coverImage" value="" required ><br>
+
+                    <!--other-->
+                    <label for="otherImages">Select other images:</label>
+                    <input type="file" id="files" name="otherImages" multiple ><br><br>
+
+                <!--tags-->
+                <fieldset>
+                    <legend>What tags?</legend>
+                    <label><input type="checkbox" name="tags[]" value="HTML"> Html</label>
+                    <label><input type="checkbox" name="tags[]" value="CSS"> Css</label>
+                    <label><input type="checkbox" name="tags[]" value="JavaScript"> JS</label>
+                    <label><input type="checkbox" name="tags[]" value="TypeScript"> TS</label>
+                    <br>
+                    <label><input type="checkbox" name="tags[]" value="Bootstrap"> Bootstrap</label>
+                    <label><input type="checkbox" name="tags[]" value="Tailwind"> Tailwind</label>
+                    <label><input type="checkbox" name="tags[]" value="ChakraUI"> ChakraUI</label>
+                    <label><input type="checkbox" name="tags[]" value="MUI"> MUI</label>
+                    <br>
+                    <label><input type="checkbox" name="tags[]" value="ReactJS"> ReactJS</label>
+                    <label><input type="checkbox" name="tags[]" value="NextJS"> NextJS</label>
+                    <br>
+                    <label><input type="checkbox" name="tags[]" value="NodeJS"> NodeJS</label>
+                    <label><input type="checkbox" name="tags[]" value="MongoDB"> MongoDB</label>
+                    <label><input type="checkbox" name="tags[]" value="Express"> Express</label>
+                    <label><input type="checkbox" name="tags[]" value="EJS"> EJS</label>
+                    <br>
+                    <label><input type="checkbox" name="tags[]" value="Python"> Python</label>
+                    <label><input type="checkbox" name="tags[]" value="Tensorflow"> Tensorflow</label>
+                    <label><input type="checkbox" name="tags[]" value="Pandas"> Pandas</label>
+                    <label><input type="checkbox" name="tags[]" value="Numpy"> Numpy</label>
+                    <br>
+                    <label><input type="checkbox" name="tags[]" value="Bash"> Bash</label>
+                    <label><input type="checkbox" name="tags[]" value="Shell"> Shell</label>
+                </fieldset>
+
+                <button class="btn mt-3 btn-dark">Upload</button>
+        
+            </form>
+     
+          </section>
+          <section class="articles p-5 rounded bg-light mt-4 mb-5 shadow-lg" id="">
+            <h1 class="mt-1">Delete Project</h1>
+            <form action="/projects/delete?_method=DELETE"  method="post" class="form-styling"  >
+                
+                <!--Name plus project info-->
+                <label for="id" class="form-label">Id</label>
+                <input type="text"  id="" name="id" required class="form-control">
+                <button class="btn mt-3 btn-dark">Delete</button>
+        
+            </form>
+     
+          </section>
+          <hr>
+          <section class="articles p-5 rounded bg-light mt-4 mb-5 shadow-lg" id="">
+            <h1 class="mt-1">Tech Upload</h1>
+            <form action="/techs/upload"  method="post" class="form-styling"  enctype="multipart/form-data">
+                
+                <!--Name plus info-->
+                <label for="name" class="form-label">name</label>
+                <input type="text"  id="" name="name" required class="form-control">
+                
+                <label for="description" class="form-label">description</label>
+                <textarea id="content" name="description" class="form-control" required></textarea>
+                
+
+                <!--images-->
+                
+                    <!--icon-->
+                    <label for="iconImage" class="form-label mt-3">Upload Icon</label>
+                    <input type="file" 
+                        name="iconImage" value="" required ><br>
+
+
+                        <label for="category" class="form-label">category</label>
+                        <select name="category" id="category" class="form-control mt-3" required>
+                            <option value="lang">Language</option>
+                            <option value="design">Design</option>
+                            <option value="framework">Framework</option>
+                            <option value="backend">Backend</option>
+                            <option value="db">DB</option>
+                            <option value="sourcecontrol">Source Control</option>
+                        </select>
+        
+                <button class="btn mt-3 btn-dark">Upload</button>
+        
+            </form>
+     
+          </section>
+          <section class="articles p-5 rounded bg-light mt-4 mb-5 shadow-lg" id="">
+            <h1 class="mt-1">Delete Tech</h1>
+            <form action="/techs/delete?_method=DELETE"  method="post" class="form-styling"  >
+                
+                <!--Name plus project info-->
+                <label for="id" class="form-label">Id</label>
+                <input type="text"  id="" name="id" required class="form-control">
+                <button class="btn mt-3 btn-dark">Delete</button>
+        
+            </form>
+     
+          </section>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/fileCheck.js"></script>
+</body>
+</html>
