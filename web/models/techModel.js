@@ -1,4 +1,4 @@
-import { Schema, model,models, mongoose } from 'mongoose'
+import { Schema, model,models } from 'mongoose'
 
 const TechSchema = new Schema({
     name: String,

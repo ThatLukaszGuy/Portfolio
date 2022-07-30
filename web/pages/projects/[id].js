@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react'
-import { useRouter } from 'next/router'
+import React from 'react';
 import { HeadConfig } from '../../components/Layout/HeadConfig'
 import { Nav } from '../../components/Layout/Nav'
 import { Footer } from '../../components/Layout/Footer'
 import { Display } from '../../components/Project/Display'
- 
+import DB from '../../utils/DB'
+import Projects from '../../models/projectModel'
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:3000/api/projects')
-    const data = await res.json()
+    await DB()
+    const res = await Projects.find({})
+    const data = await JSON.parse(JSON.stringify(res))
 
     const paths = data.map(project => {
         return {
@@ -23,9 +24,10 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
+    await DB()
     const id = context.params.id
-    const res = await fetch('http://localhost:3000/api/projects/' + id)
-    const data = await res.json()
+    const res =  await Projects.findOne({ _id: id })
+    const data = await JSON.parse(JSON.stringify(res))
 
     return {
         props: { project: data }
