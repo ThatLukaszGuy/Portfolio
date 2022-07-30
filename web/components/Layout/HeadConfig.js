@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-export const HeadConfig = ({ title }) => {
+export const HeadConfig = ({ title, color }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -11,6 +11,7 @@ export const HeadConfig = ({ title }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta name="keywords" content="Portfolio NextJS Developer Webdev Fullstack"/>
       <meta name="author" content="ThatLukaszGuy"/>
+      <meta name = "theme-color" content = {color}></meta>
     </Head>
   )
 }

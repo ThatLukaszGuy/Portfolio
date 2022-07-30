@@ -80,7 +80,7 @@ body::-webkit-scrollbar {
 }
 
 
-
+  /* nav */
 li {
   font-weight: 400;
   font-size: 14px;
@@ -98,6 +98,19 @@ a.top-left {
   left: 60px;
 }
 
+/* Mobile nav */
+.mobileNav {
+  display: none;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.custom-bg-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 a.top-right {
   top: 60px;
 }
@@ -106,6 +119,7 @@ a.top-right {
   font-weight: 400;
   font-size: 14px;
 }
+
 
 p.bottom-left {
   bottom: 60px;
@@ -116,6 +130,8 @@ a.bottom-right {
   bottom: 60px;
   right: 60px;
 }
+
+
 
 /* blue text shadow */
 .blueTS {
@@ -211,13 +227,104 @@ box-shadow: 5px 5px 0px 0px #f1f5f9, 10px 10px 0px 0px #f8fafc, 6px 6px 16px -6p
   /* landing */
 
   @media only screen and (max-width: 440px) {
+    
+    .bar1, .bar2, .bar3{
+      width: 18px;
+      height: 3px;
+      background-color: white;
+      display:block;
+      z-index: 50;
+      top: 38px !important;
+      right: 30px;
+      border-radius: 25%;
+      margin-top: 4px;
+      box-shadow: 5px 4px 1px #9D174D
+   }
+
+
+    @-webkit-keyframes silde_to_right {
+      0% {
+         right: 100%;
+      }
+      100% {
+         right: 20%;
+         z-index: 1000000;
+      }
+   }
+
+   @keyframes silde_to_right {
+    0% {
+       right: 100%;
+    }
+    100% {
+       right: 20%;
+       z-index: 1000000;
+    }
+ }
+
+ @-moz-keyframes silde_to_right {
+  0% {
+     right: 100%;
+  }
+  100% {
+     right: 20%;
+     z-index: 1000000;
+  }
+}
+
+    .mobileNavMain {
+      display: block!important;
+      -webkit-animation-name: silde_to_right;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+      -webkit-animation-delay: 0;
+      -webkit-animation-play-state: running;
+      -webkit-animation-fill-mode: forwards;
+
+      animation-name: silde_to_right;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-delay: 0;
+      animation-play-state: running;
+      animation-fill-mode: forwards;
+      
+      -moz-animation-name: silde_to_right;
+      -moz-animation-duration: 1s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-direction: normal;
+      -moz-animation-delay: 0;
+      -moz-animation-play-state: running;
+      -moz-animation-fill-mode: forwards;
+    
+    
+    }
+
+    .mobileNav {
+      display: block!important;
+    }
+
+    .nav {
+      display: none!important;
+    }
+
+    .nav-icon {
+      display: block;
+      z-index: 50;
+      top: 38px !important;
+      right: 30px;
+    }
+
     .l1, .landing-header, .landing-p, .l-git {
       left: 20px!important;
 
     }
     .l-git {
       top: 30px !important;
-      background-color: rgba(0, 0, 0, 1);
       border-radius: 10px;
       padding: 8px;
       z-index: 50;

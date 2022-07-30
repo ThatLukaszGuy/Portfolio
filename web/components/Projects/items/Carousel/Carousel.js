@@ -87,7 +87,7 @@ export default function Carousel({projectsProps}) {
                   </Text>
                 </Stack>
                 <Flex>
-                    {project.tags.slice(0,4).map((tag, index) => (
+                    {project.tags.slice(0,3).map((tag, index) => (
                       <Tag mr={2} mt={2} key={index} colorScheme={'gray'}>
                         <TagLabel># {tag}</TagLabel>
                       </Tag>
@@ -101,7 +101,7 @@ export default function Carousel({projectsProps}) {
                   </ButtonGroup>
                     <Link href={'/projects/' + project._id}>
                       <a>
-                        <Button rightIcon={<AiOutlineArrowRight />} size={'md'} colorScheme={'tailwindPink'} className='pinkBtn'>More</Button>    
+                        <Button rightIcon={<AiOutlineArrowRight />} size={'md'} colorScheme={'tailwindPink'} >More</Button>    
                       </a>
                     </Link>
                   

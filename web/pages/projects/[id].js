@@ -41,7 +41,7 @@ const Details = ({ project }) => {
 
     return (
     <>
-        <HeadConfig title={project.name}/>
+        <HeadConfig title={project.name}  color={"#2f3136"}/>
         <Nav />
         <Display project={project}/>
         <Footer />

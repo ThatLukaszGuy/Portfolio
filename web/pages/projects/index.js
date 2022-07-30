@@ -28,7 +28,7 @@ export default function projects({ projectsProps }) {
   return (
     <>
 
-        <HeadConfig title={'Projects'}/>
+        <HeadConfig title={'Projects'} color={"#2f3136"}/>
         <Nav />
         <Project projectsProps={projectsProps}/>
         <Footer />

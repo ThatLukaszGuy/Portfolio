@@ -6,7 +6,7 @@ import { Nav } from '../../components/Layout/Nav'
 export default function index() {
   return (
     <>
-        <HeadConfig title={'Issues'}/>
+        <HeadConfig title={'Issues'} color={"#2f3136"}/>
         <Nav />
         <Issues />  
         <Footer />

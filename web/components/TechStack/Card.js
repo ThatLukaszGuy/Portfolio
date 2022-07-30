@@ -7,7 +7,6 @@ export const Card = ({ name, description,  img }) => {
 
   // NEEDED
   const SVG = Buffer.from(img.data, "base64").toString()
-
   return (
     <Box bg={'customGray.600'} p={5} rounded={'lg' } borderWidth='1px'    className=' border-gray-900 hover:cursor-pointer shadow-2xl'>
         <Flex align={'center'}>

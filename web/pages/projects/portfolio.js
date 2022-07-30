@@ -8,7 +8,7 @@ export default function portfolio() {
   return (
     <>
       
-      <HeadConfig title={'This Portfolio'}/>
+      <HeadConfig title={'This Portfolio'} color={"#2f3136"}/>
       <Nav/>
 
       <All />

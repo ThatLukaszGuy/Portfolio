@@ -8,7 +8,7 @@ import { HeadConfig } from '../../components/Layout/HeadConfig'
 export default function contact() {
   return (
     <>
-        <HeadConfig title={'Contact'}/>
+        <HeadConfig title={'Contact'} color={"#2f3136"}/>
         <Nav />
         <Contact />
         <Footer />

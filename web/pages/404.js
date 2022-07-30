@@ -7,7 +7,7 @@ import { HeadConfig } from "../components/Layout/HeadConfig";
 const index = () => {
   return (
     <>
-        <HeadConfig title={'404'}/>
+        <HeadConfig title={'404'} color={"#2f3136"}/>
         <Nav />
         <NotFound/>
         <Footer />

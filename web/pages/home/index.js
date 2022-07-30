@@ -21,7 +21,7 @@ export default function Home({ tech }) {
 
   return (
     <>
-      <HeadConfig title={'ThatLukaszGuy'}/>
+      <HeadConfig title={'ThatLukaszGuy'} color={"#0f0f0f"} />
       <Landing />
       <About />
       <TechStack tech={tech}/>
