@@ -243,13 +243,19 @@ box-shadow: 5px 5px 0px 0px #f1f5f9, 10px 10px 0px 0px #f8fafc, 6px 6px 16px -6p
 
    .bar1-rot {
     transform: rotate(45deg) ;
+    -webkit-transform: rotate(45deg) ;
     transition: transform 500ms ease-in-out;
+    -webkit-transition: transform 500ms ease-in-out;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
     box-shadow: none!important;
    }
 
    .bar2-rot {
     transform: rotate(-45deg) translateY(-5px) translateX(5px);
+    -webkit-transform: rotate(-45deg) translateY(-5px) translateX(5px) ;
     transition: transform 500ms ease-in-out;
+    -webkit-transition: transform 500ms ease-in-out;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
     box-shadow: none!important;
    }
 
