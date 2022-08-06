@@ -7,6 +7,7 @@ import { useTransition,animated } from 'react-spring'
 export const Nav = () => {
   
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+
   const { isOpen, onToggle } = useDisclosure()
 
   let mobileNav;
@@ -82,9 +83,9 @@ export const Nav = () => {
       <div 
       className="burger-menu nav-icon fixed hover:text-gray-200 "  
       onClick={() => setShowMobileMenu(!showMobileMenu) && onToggle}>
-        <span className="bar1 " ></span>
-        <span className="bar2"></span>
-        <span className="bar3"></span>
+        <span className={showMobileMenu ? 'bar1-rot bar1' : 'bar1'} ></span>
+        <span className={showMobileMenu ? 'bar2-rot bar2' : 'bar2'}></span>
+        <span className={showMobileMenu ? 'bar3-rot bar3' : 'bar3'}></span>
       </div>
           
 

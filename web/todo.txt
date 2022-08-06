@@ -14,8 +14,6 @@
   and 
   ProjectGallery (append iterator)      ✓
 
--	make about section box prettier on mobile 
+-	fav icon for all screens/browsers     ✓
 
--	fav icon for all screens/browsers
-
-- transform 45 deg for hamburger menu animation
+- transform 45 deg for hamburger menu animation ✓
