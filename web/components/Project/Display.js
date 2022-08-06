@@ -20,7 +20,7 @@ export const Display = ({ project }) => {
       </div>
       <Description project={project}/>
       
-    </div>
+    </div> 
     <div className='bg-gray-600'>
       <Gallery cover={project.coverImage} images={project.otherImages}/>
     </div>
