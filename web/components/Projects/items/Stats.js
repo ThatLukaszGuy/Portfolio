@@ -111,8 +111,8 @@ export const Stats = () => {
             <>
               
              <StatCard title={'Followers: '+ userData?.followers} icon={<MdGroup size={'2.5em'}/>} label={'User'}/>
-             <StatCard title={'Total Repos: '+ userData?.public_repos} icon={<BsFillBookmarksFill size={'2.5em'}/>} label={'User'}/>
-             <StatCard title={'Total Stars: ' + stars} icon={<AiFillStar size={'2.5em'}/>} label={'All-Repos'}/>
+             <StatCard title={'Total Repos: '+ userData?.public_repos} icon={<BsFillBookmarksFill size={'2.5em'}/>} label={'Repo'}/>
+             <StatCard title={'Total Stars: ' + stars} icon={<AiFillStar size={'2.5em'}/>} label={'Stars'}/>
              <Divider my={4}/>
              <Alert status='success' variant='left-accent'>
                 <AlertIcon />

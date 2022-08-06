@@ -3,7 +3,7 @@ import { Box,Flex, Container , Text,Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import Swal from 'sweetalert2'
 
-// INFO ABOUT LICENSE AND SHIT sweet alert two
+
 
 export const Footer = () => {
 

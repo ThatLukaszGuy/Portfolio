@@ -1,5 +1,5 @@
 
-- get own domain
+- get own domain -> add to readme in root, buy it, set as git desc link
 
 - animation tweaks 
 
@@ -13,3 +13,9 @@
   delay for techstack                   ✓
   and 
   ProjectGallery (append iterator)      ✓
+
+-	make about section box prettier on mobile 
+
+-	fav icon for all screens/browsers
+
+- transform 45 deg for hamburger menu animation

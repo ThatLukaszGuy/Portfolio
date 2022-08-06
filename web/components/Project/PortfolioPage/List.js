@@ -22,8 +22,7 @@ export const List = () => {
             <h3 className="vertical-timeline-element-title">NextJS</h3>
             <h4 className="vertical-timeline-element-subtitle">Frontend/Fullstack</h4>
             <p>
-            This was built in the NextJS framework mostly to simplify dynamic routing for the singular projects. All data from mongoDB is fetched on specific &apos;/api&apos; routes and passed
-            down to other components on request to render the desired page.  
+            This was built in the NextJS framework mostly to simplify dynamic routing for the singular projects. All data from mongoDB is fetched using Server-Side-Rendering and is later passed down to other components on request to render the desired page.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement

@@ -1,18 +1,2 @@
 for rust svg Viewbox="0 0 400 400"
 
-
-  let mobileNav;
-  let mobileOverlay;
-
-  if(showMobileMenu) {
-    mobileNav = 
-    <div className='mobileNav h-screen w-[80vw] bg-gray-900 z-50 text-white top-[0px] fixed'>
-      This is the menu
-    </div>
-
-    mobileOverlay =
-    <div 
-    onClick={() => setShowMobileMenu(false)}
-    className='mobileNav custom-bg-overlay fixed top-0 w-screen h-screen z-50'>
-    </div>
-  }
