@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Gallery = ({ cover, images }) => {
-  console.log(cover,images)
+
   return (
     <div className='py-10'>
       <div className="container px-4 sm:px-0  mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
