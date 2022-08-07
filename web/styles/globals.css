@@ -96,6 +96,7 @@ li {
 a.top-left {
   top: 60px;
   left: 60px;
+  z-index: 50;
 }
 
 /* Mobile nav */
@@ -223,6 +224,11 @@ box-shadow: 5px 5px 0px 0px #f1f5f9, 10px 10px 0px 0px #f8fafc, 6px 6px 16px -6p
 .vertical-timeline-element-content-arrow {
   border-right: 7px solid #202225!important;
 }
+
+.nav {
+  z-index: 1000!important;
+}
+
 /* media queries */
   /* landing */
 
