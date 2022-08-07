@@ -14,7 +14,7 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/ThatLukaszGuy/Nodemagic?color=dark-green) ![Forks](https://img.shields.io/github/forks/ThatLukaszGuy/Nodemagic?style=social) ![Stargazers](https://img.shields.io/github/stars/ThatLukaszGuy/Nodemagic?style=social) ![Issues](https://img.shields.io/github/issues/ThatLukaszGuy/Nodemagic) ![License](https://img.shields.io/github/license/ThatLukaszGuy/Nodemagic) 
+![Contributors](https://img.shields.io/github/contributors/ThatLukaszGuy/Portfolio?color=dark-green) ![Forks](https://img.shields.io/github/forks/ThatLukaszGuy/Portfolio?style=social) ![Stargazers](https://img.shields.io/github/stars/ThatLukaszGuy/Portfolio?style=social) ![Issues](https://img.shields.io/github/issues/ThatLukaszGuy/Portfolio) ![License](https://img.shields.io/github/license/ThatLukaszGuy/Portfolio) 
 
 ## Table Of Contents
 
