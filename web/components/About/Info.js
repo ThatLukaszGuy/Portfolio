@@ -11,7 +11,7 @@ export const Info = () => {
   return (
     <Container maxW='4xl'pt={{ md: '30vh', base: '15vh' }} ref={ref}  zIndex={12}>
     <ScaleFade  initialScale={0.9} in={enterCount > 0} >
-        <Box   className=' bg-gray-800 shadow-2xl p-5 rounded-lg border border-gray-800  cursor-pointer z-10'zIndex={12}>
+        <Box   className=' bg-gray-800 shadow-2xl p-3 sm:p-5 rounded-lg border border-gray-800  cursor-pointer z-10'zIndex={12}>
             <Flex align={'center'}  flexDirection={{ md: 'row', base: 'column' }} >
                
                     <Image
@@ -24,7 +24,7 @@ export const Info = () => {
                     />
                     
 
-                <Box color={'white'} my={3} mx={3} maxHeight={'600px'}>
+                <Box color={'white'} my={{ base: '1', sm: '3' }} mx={{ base: '0', sm: '3' }} maxHeight={'600px'}>
                     <Text   fontWeight={600} fontSize={{ md: '4xl', base: '2xl' }}  ml={8}>
                         <span className='borde border-b-4 border-pink-700'>Hi !</span> 🍉
                     </Text> 

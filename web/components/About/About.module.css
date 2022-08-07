@@ -8,6 +8,7 @@
     overflow: hidden;
     line-height: 0;
     background-color: #202225;
+    z-index: 0;
 }
 
 .csd svg {
@@ -15,6 +16,7 @@
     display: block;
     width: calc(100% + 1.3px);
     height: 121px;
+    z-index: 0;
 }
 
 .csd .sf {
