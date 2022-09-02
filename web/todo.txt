@@ -17,3 +17,5 @@
 -	fav icon for all screens/browsers     ✓
 
 - transform 45 deg for hamburger menu animation ✓
+
+- make site incase there is no deployment or redirect to download page
