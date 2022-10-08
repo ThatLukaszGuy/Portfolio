@@ -23,13 +23,14 @@ export const theme = extendTheme({
       400: "#be185d",
       500: "#9d174d",
       600: "#831843",
-      700:"#FFFFFF",
+      700:"#831843",
       800:"#FFFFFF",
 
     },
     customBlue: {
         500: "#0c8cbf",
-        600: "#0c8cbf"
+        600: "#0c8cbf",
+        700: "#0c7ca8"
     },
     customGray: {
       600: "#4f545c",

@@ -1,5 +1,5 @@
 import { useGLTF } from '@react-three/drei'
-import { useRef } from 'react'
+import { useRef,useState,useEffect } from 'react'
 import { useBox } from '@react-three/cannon'
 
 export const HeadModel = () => {
@@ -8,6 +8,13 @@ export const HeadModel = () => {
     const { nodes, materials } = useGLTF('/models/scene.gltf')
     const group = useRef()
     const [boxRef,boxApi] = useBox(() => ({ mass: 1, position: [0,6,0] }))
+  // hover
+  const [hovered, setHovered] = useState(false)
+
+  useEffect(() => {
+      document.body.style.cursor = hovered ? 'pointer' : 'auto'
+      return () => document.body.style.cursor = 'auto';        
+  }, [hovered])
 
     return (
     <group      
@@ -20,7 +27,7 @@ export const HeadModel = () => {
     position={[0, 1, 0]} 
     castShadow 
     receiveShadow 
-    scale={[0.7,0.7,0.7]}>
+    scale={[0.7,0.7,0.7]} onPointerOver={() => setHovered(true)}  onPointerOut={() => setHovered(false)}>
         <group rotation={[-Math.PI / 2, 0, 0]}>
             <mesh geometry={nodes.Object_2.geometry} material={materials.material_0} />
             <mesh geometry={nodes.Object_3.geometry} material={materials.material_0} />

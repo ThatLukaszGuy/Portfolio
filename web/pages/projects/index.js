@@ -1,12 +1,9 @@
 import React from 'react'
-import { Footer } from '../../components/Layout/Footer'
-import { Nav } from '../../components/Layout/Nav'
+
 import { HeadConfig } from '../../components/Layout/HeadConfig'
 import { Project } from '../../components/Projects/Project'
 import DB from '../../utils/DB'
 import Projects from '../../models/projectModel'
-
-
 
 export async function getServerSideProps() {
   await DB();
@@ -18,9 +15,6 @@ export async function getServerSideProps() {
 
 }
 
-
-
-
 export default function projects({ projectsProps }) {
   
 
@@ -28,11 +22,9 @@ export default function projects({ projectsProps }) {
   return (
     <>
 
-        <HeadConfig title={'Projects'} color={"#2f3136"}/>
-        <Nav />
-        <Project projectsProps={projectsProps}/>
-        <Footer />
-
+        <HeadConfig title={'Projects'} color={"#0f0f0f"}/>
+        <Project />
+        
     </>
   )
 }

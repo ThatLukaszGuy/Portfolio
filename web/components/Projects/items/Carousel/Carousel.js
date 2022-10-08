@@ -17,7 +17,7 @@ import {
     
   } from "@chakra-ui/react";
 
-import styles from '../../../TechStack/Tech.module.css'  
+
 import ProjectCarousel from "./ProjectCarousel";
 import { AiFillGithub ,AiOutlineArrowRight} from 'react-icons/ai'
 import { BiWorld } from 'react-icons/bi'

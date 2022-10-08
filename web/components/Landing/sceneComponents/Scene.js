@@ -4,7 +4,10 @@ import { MovingSpot } from './MovingSpot'
 import { HeadModel } from './HeadModel'
 import { Physics } from '@react-three/cannon'
 
+
 export function Scene() {
+
+
     const depthBuffer = useDepthBuffer({ frames: 1 })
     return (
       <>
@@ -12,7 +15,9 @@ export function Scene() {
         <MovingSpot depthBuffer={depthBuffer} color="#b00c3f" position={[1, 3, 0]} />
         
         <Physics>
-          <HeadModel />
+          
+          <HeadModel   />
+          
           <Ground />
         </Physics>
 

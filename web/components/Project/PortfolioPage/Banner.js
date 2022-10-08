@@ -17,7 +17,10 @@ export const Banner = () => {
     '/home',
     '/projects',
     '/projects/[:id]',
-    '/projects/portfolio',
+    '/projects/all',
+    '/projects/hub',
+    '/projects/stats',
+    '/projects/other',
     '/contact',
     '/issues',
     '/404',
@@ -34,7 +37,7 @@ export const Banner = () => {
       <SlideFade in={isLoaded} delay={0.4}>   
         <div className='pt-[15vh] text-center '>
             <div className='text-center font-bold text-4xl sm:text-5xl md:text-7xl pinkTS'>
-               # Technology List
+               # Other
             </div>
             <div className='text-center text-gray-300 mt-10 text-lg sm:text-xl'>
                 See main Techstack used for this site /    

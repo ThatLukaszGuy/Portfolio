@@ -5,15 +5,11 @@ import {
     Stat,
     StatLabel,
     StatNumber,
-    Divider,
-    Alert,
-    AlertIcon,
     Text
   } from '@chakra-ui/react';
   import { BsFillBookmarksFill } from 'react-icons/bs';
 import { MdGroup } from 'react-icons/md';
 import { AiFillStar } from 'react-icons/ai'
-import axios from 'axios';
 import { CustomLoader } from '../../Layout/CustomLoader';
 import styles from '../../TechStack/Tech.module.css'
 
@@ -56,43 +52,11 @@ const StatCard = ({ title,label,  icon }) => {
 
 
 
-export const Stats = () => {
+export const Stats = ({ stars, repoData, userData }) => {
   
     
 
-    const repoUrl = 'https://api.github.com/users/thatlukaszguy/repos'
-    const [repoData, setRepoData] = useState([])
-    const userUrl = 'https://api.github.com/users/thatlukaszguy'
-    const [userData, setUserData] = useState({})
-    const [stars , setStars] = useState(0) 
-    
-    const sumStars = (arr) => {
-      let sum = 0
-      arr.forEach(s => {
-        sum += s
-      })
-      return sum 
-    }
 
-
-    useEffect(() => {
-       // getting all repo data
-       axios.get(repoUrl)
-       .then((res) => {
-         setRepoData(res.data)
-         const starArray = res.data.map(r => r?.stargazers_count)
-         const fullSum = sumStars(starArray)
-         setStars(fullSum)
-       })
-
-
-       // getting user data
-       axios.get(userUrl).then((res) => {
-         setUserData(res.data)
-       })
-
-      
-     }, [])
     
 
 
@@ -113,11 +77,7 @@ export const Stats = () => {
              <StatCard title={'Followers: '+ userData?.followers} icon={<MdGroup size={'2.5em'}/>} label={'User'}/>
              <StatCard title={'Total Repos: '+ userData?.public_repos} icon={<BsFillBookmarksFill size={'2.5em'}/>} label={'Repo'}/>
              <StatCard title={'Total Stars: ' + stars} icon={<AiFillStar size={'2.5em'}/>} label={'Stars'}/>
-             <Divider my={4}/>
-             <Alert status='success' variant='left-accent'>
-                <AlertIcon />
-                All data from the github API was retrieved successfully
-              </Alert>
+
             </>          
           : <div className='text-center py-10'> <CustomLoader color={'#9D174D'} /> </div>
           }

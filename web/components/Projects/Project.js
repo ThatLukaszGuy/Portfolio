@@ -1,18 +1,16 @@
-import styles from './Projects.module.css'
 import React from 'react'
-import { GridLayout } from './GridLayout'
-import { ProjectBanner } from './ProjectBanner'
-import { ProjectTabs } from './items/ProjectTabs'
+import ProjectGalleryChoice from './ProjectGalleryChoice'
 
-export const Project = ({projectsProps}) => {
+export const Project = () => {
   return (
     <>
-      <ProjectBanner />
-      <div className={styles.projectSecondBG}>
-        <GridLayout />
-        <ProjectTabs projectsProps={projectsProps}/>
-      </div>
-        
+      
+      <ProjectGalleryChoice />
+      
     </>
   )
 }
+//<div className={styles.projectSecondBG}>
+//  <GridLayout />
+//  <ProjectTabs projectsProps={projectsProps}/>
+//</div>

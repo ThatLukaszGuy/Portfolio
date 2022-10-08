@@ -8,8 +8,7 @@ import {
     Input,
     Select,
     Textarea,
-    Stack,
-    Slide
+    Stack
 } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'

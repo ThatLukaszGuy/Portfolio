@@ -19,3 +19,5 @@
 - transform 45 deg for hamburger menu animation ✓
 
 - make site incase there is no deployment or redirect to download page
+- make alerts for project section -> move around , touch object etc
+- fiz monitor click

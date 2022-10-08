@@ -11,6 +11,19 @@
   -ms-user-select: text; 
 }
 
+@media (-webkit-transform-3d) {
+  .preserve, canvas {
+    transform-style: preserve-3d;
+  }
+}
+
+@font-face {
+  font-family: cyber;
+  src: url('../public/fonts/alt/eternal.otf');
+}
+
+
+
 html,
 body,
 #root,
@@ -31,13 +44,26 @@ body,#root {
   /*Chrome, Safari, Edge*/
   display: none;
 }
-
+/*apply cyber font*/
+.cyber {
+  font-family: cyber;
+}
 
 html {
   scroll-behavior: smooth!important;
   overflow-x:hidden!important;
   -webkit-overflow-scrolling: hidden!important;
  
+}
+
+*::selection {
+  color: white;
+  background-color: #9D174D;
+
+}
+
+*:focus {
+  outline: #9D174D!important;
 }
 
 body {
@@ -63,8 +89,8 @@ body::-webkit-scrollbar {
 }
 
 .landing-header {
-  letter-spacing: -2px;
-  font-family: 'Inter var', sans-serif;
+  letter-spacing: 2px;
+  font-family: cyber, sans-serif;
 }
 
 .landing-header > span {
@@ -81,6 +107,8 @@ body::-webkit-scrollbar {
 
 
   /* nav */
+
+
 li {
   font-weight: 400;
   font-size: 14px;
@@ -114,17 +142,20 @@ a.top-left {
 
 a.top-right {
   top: 60px;
+  z-index: 100!important;
 }
 
 .landing-p {
   font-weight: 400;
   font-size: 14px;
+  font-family: cyber;
 }
 
 
 p.bottom-left {
   bottom: 60px;
   left: 60px;
+
 }
 
 a.bottom-right {
@@ -136,7 +167,11 @@ a.bottom-right {
 
 /* blue text shadow */
 .blueTS {
-  text-shadow: 5px 4px 1px #0c8cbf;
+  text-shadow: 7px -4px 1px #0c8cbf;
+}
+
+.whiteTS {
+  text-shadow: 3px -5px 1px #ffffff;
 }
 
 /* pink ts */
@@ -165,16 +200,31 @@ box-shadow: 5px 5px 0px 0px #f1f5f9, 10px 10px 0px 0px #f8fafc, 6px 6px 16px -6p
 }
 
 .Card-bg-shadow:hover {
-  -webkit-box-shadow: 5px 5px 0px 0px #b31a57, 10px 10px 0px 0px #289FED, 6px 6px 16px -6px rgba(0,0,0,0);
+  -webkit-box-shadow: 5px 5px 0px 0px #b31a57, 6px 6px 16px -6px rgba(0,0,0,0);
+  box-shadow: 5px 5px 0px 0px #b31a57, 6px 6px 16px -6px rgba(0,0,0,0);
+  /*
+    -webkit-box-shadow: 5px 5px 0px 0px #b31a57, 10px 10px 0px 0px #289FED, 6px 6px 16px -6px rgba(0,0,0,0);
   box-shadow: 5px 5px 0px 0px #b31a57, 10px 10px 0px 0px #289FED, 6px 6px 16px -6px rgba(0,0,0,0);
-  
+  */
 }
 
 /* Project */
+.left-monitor {
+  overflow-y: auto;
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
 .img-effect {
   position: relative;
-  -webkit-filter: grayscale(100%) blur(3px);
-  filter: grayscale(100%) blur(5px) brightness(60%);
+  -webkit-filter: grayscale(100%) blur(0px);
+  filter: grayscale(100%) blur(0px) brightness(60%);
 
   transition: .4s ease-in-out;
   -webkit-transition: .4s ease-in-out;

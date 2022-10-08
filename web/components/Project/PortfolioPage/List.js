@@ -35,7 +35,7 @@ export const List = () => {
             <h3 className="vertical-timeline-element-title">WebGL</h3>
             <h4 className="vertical-timeline-element-subtitle">Frontend</h4>
             <p>
-            As an abstraction of WebGL , I used a package based on ThreeJS - react-three-fiber. This was used to render the landing page on the &apos;/home&apos; route.
+            As an abstraction of WebGL , I used a package based on ThreeJS - react-three-fiber. This was used to render the landing page on the &apos;/home&apos; route and in some of the &apos;/projects&apos; routes.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
