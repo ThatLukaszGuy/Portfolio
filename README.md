@@ -9,7 +9,7 @@
    </p>
 
  <p align="center">
- <a href="www.thatlukaszguy.dev" target="_blank" rel="noopener">View Page</a> 
+ <a href="https://www.thatlukaszguy.dev" target="_blank" rel="noreferrer">View Page</a> 
     
   </p>
 </p>
