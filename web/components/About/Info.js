@@ -9,9 +9,9 @@ export const Info = () => {
     const {enterCount} = useInViewport(ref, {rootMargin: "-45%"} , {disconnectOnLeave:false}, {})
 
   return (
-    <Container maxW='4xl'pt={{ md: '30vh', base: '15vh' }} ref={ref} className='z-1' zIndex={1}>
+    <Container maxW='4xl'pt={{ md: '30vh', base: '15vh' }} ref={ref} >
     <ScaleFade  initialScale={0.9} in={enterCount > 0} >
-        <Box   className=' bg-gray-800 shadow-2xl p-3 sm:p-5 rounded-lg border z-1 border-gray-800  z-10'zIndex={1}>
+        <Box   className=' bg-gray-800 shadow-2xl p-3 sm:p-5 rounded-lg border  border-gray-800  z-10'>
             <Flex align={'center'}  flexDirection={{ md: 'row', base: 'column' }} >
                
                     <Image
