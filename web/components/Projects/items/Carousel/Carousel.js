@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect, useContext } from "react";
 import Link from 'next/link'
 import {
@@ -99,10 +100,10 @@ export default function Carousel({projectsProps}) {
                       <IconButton aria-label='Add to friends' bg={'black'} color='white' _hover={{ bg: 'gray.900' }} icon={<AiFillGithub />} onClick={() => window.open(project.links.github, '_blank')}/>
                       <IconButton aria-label='Add to friends' bg={'blue.500'} color='white' _hover={{ bg: 'blue.600' }} icon={<BiWorld />} onClick={() => window.open(project.links.deployment, '_blank')}/>
                   </ButtonGroup>
-                    <Link href={'/projects/' + project._id}>
-                      <a>
+                    <Link href={'/projects/all/' + project._id}>
+                     
                         <Button rightIcon={<AiOutlineArrowRight />} size={'md'} colorScheme={'tailwindPink'} >More</Button>    
-                      </a>
+                    
                     </Link>
                   
                 </Flex>

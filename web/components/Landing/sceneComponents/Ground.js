@@ -1,3 +1,4 @@
+"use client"
 import React, {useRef} from "react";
 import {  useLoader } from "@react-three/fiber";
 import {  TextureLoader } from "three";
@@ -5,7 +6,7 @@ import { usePlane } from '@react-three/cannon'
 export const Ground = () => {
 
     const [normalMap] = useLoader(TextureLoader, [
-        '/textures/grid-texture.png'
+        '../textures/grid-texture.png'
       ])
 
     const [planeRef] = usePlane(() => ({

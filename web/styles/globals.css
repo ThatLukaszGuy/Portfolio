@@ -279,6 +279,25 @@ box-shadow: 5px 5px 0px 0px #f1f5f9, 10px 10px 0px 0px #f8fafc, 6px 6px 16px -6p
   z-index: 1000!important;
 }
 
+/* Timeline component */
+.my-controls {
+  display: none!important;
+}
+
+.my-card-title {
+  color: #e3e5e8 !important;
+}
+
+.using-icon {
+  color:#202225 !important;
+  background-color: #e3e5e8 !important;
+  
+}
+
+.using-icon svg {
+  height: 100px!important;
+}
+
 /* media queries */
   /* landing */
 

@@ -1,3 +1,4 @@
+"use client"
 import { Stats } from './Stats'
 import React,{ useState,useEffect } from 'react'
 import { Container, Divider, Image, SlideFade } from '@chakra-ui/react'

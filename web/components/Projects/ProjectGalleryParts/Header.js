@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { useThree } from '@react-three/fiber'
 import { Text} from '@react-three/drei'

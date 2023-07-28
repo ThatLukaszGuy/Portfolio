@@ -15,8 +15,8 @@ export function Scene() {
         <MovingSpot depthBuffer={depthBuffer} color="#b00c3f" position={[1, 3, 0]} />
         
         <Physics>
-          
-          <HeadModel   />
+
+          <HeadModel />
           
           <Ground />
         </Physics>

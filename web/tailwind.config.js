@@ -2,8 +2,11 @@
 module.exports = {
   mode: 'jit',
   content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     "./pages/**/*.{js,ts,jsx,tsx}",
+    "./layout/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "!./node_modules",
   ],
   theme: {
     extend: {
@@ -29,4 +32,7 @@ module.exports = {
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  }
 }

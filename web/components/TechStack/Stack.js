@@ -1,3 +1,4 @@
+"use client"
 import React,{useRef} from 'react'
 import { Card } from './Card'
 import { Text,SlideFade } from '@chakra-ui/react'

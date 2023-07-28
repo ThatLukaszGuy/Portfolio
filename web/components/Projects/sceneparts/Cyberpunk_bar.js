@@ -16,7 +16,7 @@ export const Model = ({ ...props }) => {
   // create mesh that redirect onclick -> style this mesh to look like screen
 
 
-  const { nodes, materials } = useGLTF('models/cyberpunk_bar.glb')
+  const { nodes, materials } = useGLTF('../models/cyberpunk_bar.glb')
   return (
     <group     ref={node => {
                 group.current = node

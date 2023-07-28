@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { Box,Flex,Text, Image} from '@chakra-ui/react'
 import styles from './Tech.module.css'

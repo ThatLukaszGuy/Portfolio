@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { ContactBanner } from './ContactBanner'
 import { ContactHandler } from './ContactHandler'

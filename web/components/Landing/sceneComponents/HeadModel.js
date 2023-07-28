@@ -1,3 +1,4 @@
+"use client"
 import { useGLTF } from '@react-three/drei'
 import { useRef,useState,useEffect } from 'react'
 import { useBox } from '@react-three/cannon'
@@ -24,7 +25,7 @@ export const HeadModel = () => {
       }}
     onClick={() => { boxApi.velocity.set(0,2,0) }}  
     dispose={null} 
-    position={[0, 1, 0]} 
+    position={[0, 0, 0]} 
     castShadow 
     receiveShadow 
     scale={[0.7,0.7,0.7]} onPointerOver={() => setHovered(true)}  onPointerOut={() => setHovered(false)}>

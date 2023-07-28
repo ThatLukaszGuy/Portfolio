@@ -1,3 +1,4 @@
+"use client"
 import { Vector3 } from 'three'
 import { useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'

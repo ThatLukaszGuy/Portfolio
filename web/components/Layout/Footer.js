@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Box,Flex, Container , Text,Button } from '@chakra-ui/react'
 import Link from 'next/link'
@@ -63,7 +65,7 @@ export const Footer = () => {
             <Container   maxW={'4xl'} py={8} color={'white'}>
                 <Flex flexDirection={{ md: 'row', base: 'column' }} justify={{md: 'space-between', base: 'center'}} textAlign={'center'}>    
                     
-                    <Link href={'/issues'}><a><Button colorScheme={'null'} fontWeight={'400'} color='whiteAlpha.800' ><span className='pinkTS'>Any Issues?</span></Button></a></Link>
+                    <Link legacyBehavior href={'/issues'}><a><Button colorScheme={'null'} fontWeight={'400'} color='whiteAlpha.800' ><span className='pinkTS'>Any Issues?</span></Button></a></Link>
                     
                     
                     <Button colorScheme={'null'} fontWeight={'400'} color='whiteAlpha.800' onClick={license}><span className='blueTS'>© 2022 ThatLukaszGuy</span></Button>

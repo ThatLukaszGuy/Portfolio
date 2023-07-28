@@ -1,3 +1,4 @@
+"use client"
 import Carousel from './Carousel/Carousel'
 import React,{ useState,useEffect } from 'react'
 import { SlideFade,Badge } from '@chakra-ui/react'

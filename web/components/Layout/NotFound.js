@@ -21,7 +21,7 @@ export const NotFound = () => {
                 <Flex justifyContent={{ md: 'start' , base: 'center'}} flexDirection={'row'}>
                 <Alert status='warning' mt={5} mr={3} variant='left-accent'>
                   <AlertIcon />
-                      <Text>Try double checking the url you entered or simply return home. The original Link might have been moved or edited. You may also check out the <Link href={'/issues'}><a><Badge  colorScheme='orange' variant='solid' >Issues</Badge></a></Link>  section
+                      <Text>Try double checking the url you entered or simply return home. The original Link might have been moved or edited. You may also check out the <Link href={'/issues'}><Badge  colorScheme='orange' variant='solid' >Issues</Badge></Link>  section
                       </Text>
                 </Alert>
 

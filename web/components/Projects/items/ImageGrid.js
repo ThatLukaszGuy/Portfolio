@@ -1,3 +1,4 @@
+"use client"
 import React,{useRef} from 'react'
 import { ScaleFade } from '@chakra-ui/react' 
 import Link from 'next/link'
@@ -15,14 +16,14 @@ export const ImageGrid = ({ projectsProps }) => {
             <div 
             className='relative'
             >
-                <Link href={'/projects/' + project._id}>
-                      <a>
+                <Link  href={'/projects/all/' + project._id}>
+                      
                         <img
                             className='img-effect aspect-square'   
                             src={`data:image/png;base64,${Buffer.from(project.coverImage.data.data).toString( "base64")}`} 
                             alt=''
                             />
-                    </a>
+                    
                 </Link>
                 <div>
                     <p className={'grid-text text-pink-800 text-4xl font-thin'}>{project.name}</p>
