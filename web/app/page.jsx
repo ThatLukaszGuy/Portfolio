@@ -1,4 +1,3 @@
-"use client"
 import { Loader } from "../components/Layout/Loader"
 
 export const metadata = {

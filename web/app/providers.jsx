@@ -1,5 +1,4 @@
-'use client'
-
+"use client"
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from "@chakra-ui/react";

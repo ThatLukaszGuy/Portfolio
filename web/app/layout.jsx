@@ -1,10 +1,10 @@
-"use client"
+// has to be server component
 import { Loader } from '../components/Layout/Loader';
 import '../styles/globals.css'
 import { Providers } from "./providers";
 import {Suspense} from 'react'
 
- 
+
 export const metadata = {
   title: 'ThatLukaszGuy',
   themeColor: '',

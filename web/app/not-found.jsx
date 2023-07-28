@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { Footer } from '../components/Layout/Footer'
 import { Nav } from '../components/Layout/Nav'
@@ -22,7 +21,7 @@ export const metadata = {
 
 }
 
-const index = () => {
+export default function page() {
   return (
     <>
         <HeadConfig title={'404'} color={"#2f3136"}/>
@@ -32,5 +31,3 @@ const index = () => {
     </>
   )
 }
-
-export default index
