@@ -1,3 +1,4 @@
+"use client"
 import React, {useRef, useEffect, useState} from 'react'
 import { Text,Button,Flex, useDisclosure,Box,Slide } from '@chakra-ui/react'
 import { FaPhone } from 'react-icons/fa'

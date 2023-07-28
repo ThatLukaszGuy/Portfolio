@@ -1,3 +1,4 @@
+"use client"
 import { Button,Text } from '@chakra-ui/react'
 import React from 'react'
 import { AiFillGithub } from "react-icons/ai"

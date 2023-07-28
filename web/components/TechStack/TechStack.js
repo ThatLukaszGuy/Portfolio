@@ -1,3 +1,4 @@
+"use client"
 import { Box, Container,Text,SlideFade } from '@chakra-ui/react'
 import React,{useRef} from 'react'
 import { Stack } from './Stack'

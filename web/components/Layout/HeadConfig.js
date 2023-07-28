@@ -5,7 +5,7 @@ export const HeadConfig = ({ title, color }) => {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content="ThatLukaszGuy's Portfolio made in NextJS" />
+      <meta name="description" content="ThatLukaszGuy's Portfolio website" />
       <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta name="keywords" content="Portfolio NextJS Developer Webdev Fullstack"/>

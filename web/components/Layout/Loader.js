@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 import { ScaleLoader } from 'react-spinners'
 import { HeadConfig } from './HeadConfig'
 

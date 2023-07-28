@@ -1,3 +1,4 @@
+"use client"
 import React,{useRef} from 'react'
 import { Container,Flex,Image,Text,Box,ScaleFade,Button,Badge } from '@chakra-ui/react'
 import { useInViewport } from 'react-in-viewport'
@@ -44,7 +45,7 @@ export const Info = () => {
 
                         <Link href={'/projects'}>
                             <Button   size={{ base: 'sm', sm: 'md' }} rightIcon={<FaArrowRight />} ml={{ md: 4,base: 8 }} mt={5} colorScheme='customBlue' variant='outline' className='hover:bg-gray-800 blueBtn'>                           
-                                    <a>See Projects</a>
+                                See Projects
                             </Button>
                         </Link>
                 </Box>

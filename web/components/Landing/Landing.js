@@ -1,3 +1,5 @@
+"use client"
+import '../../styles/globals.css'
 import React from 'react'
 import { FullCanvas } from './sceneComponents/FullCanvas'
 import { AiOutlineArrowDown } from 'react-icons/ai'
@@ -6,7 +8,7 @@ import { motion } from 'framer-motion'
 
 export const Landing = () => {
 
-
+ 
 //text-[#9D174D]
   return (
     <>

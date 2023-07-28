@@ -1,3 +1,4 @@
+"use client"
 import React,{useState} from 'react'
 import Link from 'next/link'
 import { Slide,useDisclosure } from '@chakra-ui/react'
@@ -18,15 +19,15 @@ export const Nav = () => {
     <div className='mobileNav z-50 mobileNavMain h-screen w-[80vw] bg-gray-900   top-[0px] fixed'>
       
       <div className='flex h-screen items-center space-y-[30px] mt-[35vh] flex-col '>
-        <Link href={'/home'}>
+        <Link legacyBehavior href={'/home'}>
           <a className='text-white z-50 hover:text-gray-200 pinkTS'>  Home</a>
         </Link>
 
-        <Link href={'/projects'}>
+        <Link legacyBehavior href={'/projects'}>
           <a className='text-white z-50 hover:text-gray-200 pinkTS'>  Projects</a>
         </Link>
 
-        <Link href={'/contact'}>
+        <Link legacyBehavior href={'/contact'}>
           <a className='text-white z-50 hover:text-gray-200 pinkTS'>  Contact</a>
         </Link>
       </div>
@@ -54,20 +55,20 @@ export const Nav = () => {
           <ul className=''>
 
             <li>
-              <Link href={'/home'}>
+              <Link legacyBehavior href={'/home'}>
                 <a  className=' fixed z-50 hover:text-gray-200 top-right l2  right-[180px]  text-white'>Home</a> 
               </Link>
             </li>
 
             <li>
 
-              <Link href={'/projects'}>
+              <Link legacyBehavior href={'/projects'}>
                 <a  className=' fixed z-50 hover:text-gray-200 top-right l3 right-[120px] text-white'>Projects</a> 
               </Link>
             </li>
               
             <li>
-              <Link href={'/contact'}>
+              <Link legacyBehavior href={'/contact'}>
                 <a className=' fixed z-50 hover:text-gray-200 top-right l4 right-[60px] text-white' >Contact</a> 
               </Link>
             </li>

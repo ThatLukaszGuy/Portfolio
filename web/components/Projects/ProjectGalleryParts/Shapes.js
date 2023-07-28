@@ -1,20 +1,25 @@
+"use client"
 import React from 'react'
 import { useRef } from 'react'
-import { useFrame, useThree } from '@react-three/fiber'
+import { useFrame, useThree} from '@react-three/fiber'
 import { useScroll} from '@react-three/drei'
 import { animated, useSpring } from '@react-spring/three'
+
+
+
+
 export default function Shapes() {
     const { viewport } = useThree()
-  
+
     return (
       <>
-        
+
         <Plane factor={-2} color="#9D174D" scale={5} position={[viewport.width / -2, -viewport.height / 10, -5]} />
         
         <Stripe factor={-1} color="#0c8cbf" position={[0, -viewport.height * 1.25, -1]} />
-        <Torus factor={-2} scale={0.5} color="#0c8cbf" position={[2, -3, -0.2]} />
+        <Torus factor={-2} scale={0.5} color="#0c8cbf" position={[2, -2.7, -0.2]} />
         
-        <Torus factor={1} scale={1} color="#9D174D" position={[0, -viewport.height * 2, -1]} />
+
       </>
     )
   }
