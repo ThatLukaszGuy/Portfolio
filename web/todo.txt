@@ -1,1 +1,2 @@
 - for singular projects add full screen image preview
+- remember to redeploy since /home and /projects/all are rendered static

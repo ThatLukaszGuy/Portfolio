@@ -2,12 +2,14 @@ import '../../styles/globals.css'
 import { About } from "../../components/About/About";
 import { Landing } from "../../components/Landing/Landing";
 import { Footer } from "../../components/Layout/Footer";
-import { HeadConfig } from "../../components/Layout/HeadConfig";
 import { TechStack } from "../../components/TechStack/TechStack";
+import DB from '../../utils/DB';
+import Techs from '../../models/techModel';
 
 export async function getTechs() {
-    const data = await fetch("http://localhost:3000/api/tech");
-    return data.json()
+    await DB()
+    const techs = await Techs.find({})
+    return JSON.parse(JSON.stringify(techs)) // need to be like this because of react bug
   }
   
  

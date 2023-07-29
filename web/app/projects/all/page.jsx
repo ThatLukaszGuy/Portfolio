@@ -1,12 +1,14 @@
 import React from 'react'
 import { Footer } from '../../../components/Layout/Footer'
 import { Nav } from '../../../components/Layout/Nav'
-import { HeadConfig } from '../../../components/Layout/HeadConfig'
+import DB from '../../../utils/DB'
 import { All } from '../../../components/Projects/items/All'
+import Projects from '../../../models/projectModel'
 
 export async function getProjects() {
-  const data = await fetch("http://localhost:3000/api/projects")
-  return data.json()
+  await DB()
+  const projects = await Projects.find({}).select('-otherImages -description.reason -description.difficulties')
+  return  JSON.parse(JSON.stringify(projects)) 
 }
 
 export const metadata = {
@@ -28,12 +30,12 @@ export const metadata = {
 
 export default async function all() {
     const data = await getProjects()
-   
+    
     return (
     <>
       
       <Nav/>
-      <All projectsProps={data.projects}/>
+      <All projectsProps={data}/>
       <Footer />
     </>
   )

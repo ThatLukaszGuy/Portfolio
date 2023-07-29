@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { HeadConfig } from '../../../../components/Layout/HeadConfig'
+import DB from '../../../../utils/DB';
+import Projects from '../../../../models/projectModel';
 import { Nav } from '../../../../components/Layout/Nav'
 import { Footer } from '../../../../components/Layout/Footer'
 import  Display  from '../../../../components/Project/Display'
@@ -9,15 +10,10 @@ import { notFound } from 'next/navigation'
 //            <HeadConfig title={data.name}  color={"#2f3136"}/>
 export async function getProjectById(id) {
     try {
-  
-        const res = await fetch(`http://localhost:3000/api/projects/${id}`,
-        {cache: 'no-store'})
-  
-        if (!res.ok) {
-            notFound()
-        }
-  
-        return res.json()
+        await DB()
+        const project = await Projects.findOne({_id: id})
+
+        return JSON.parse(JSON.stringify(project)) 
   
     } catch (e) {
         notFound()
@@ -27,7 +23,7 @@ export async function getProjectById(id) {
 export async function generateMetadata({params}) {
     const project = await getProjectById(params.id)
     return {
-        title: project.project.name,
+        title: project.name,
         themeColor: '#2f3136',
         description: "An interactive, modern Portfolio website showcasing the author's projects",
         author: 'ThatLukaszGuy',
@@ -53,7 +49,7 @@ export default async function Page({ params }) {
     return (
         <>
             <Nav />
-            <Display project={project.project}/>
+            <Display project={project}/>
             <Footer />
         </>
     )
