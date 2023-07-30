@@ -1,2 +1,3 @@
 - for singular projects add full screen image preview
 - remember to redeploy since /home and /projects/all are rendered static
+- Cell fracture effect: https://medium.com/@leannewerner/creating-cell-fractured-animations-using-blender-and-react-three-fiber-dbd0299d4767 
