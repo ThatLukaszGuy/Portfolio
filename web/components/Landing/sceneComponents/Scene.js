@@ -1,7 +1,6 @@
 import { useDepthBuffer } from '@react-three/drei'
 import { Ground } from './Ground'
 import { MovingSpot } from './MovingSpot'
-import { HeadModel } from './HeadModel'
 import { Physics } from '@react-three/cannon'
 import { Model } from './DavidModel'
 

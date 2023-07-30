@@ -21,7 +21,7 @@ export const FullCanvas = () => {
         
             <color attach="background" args={['#202020']} />
             <fog attach="fog" args={['#202020', 5, 20]} />
-              <ambientLight intensity={0.01} />
+              <ambientLight intensity={0} />
               <Stripe  factor={1}  color="#000000" position={[0, 1, -5]} />
   
             <Scene />
