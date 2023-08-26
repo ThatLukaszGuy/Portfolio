@@ -37,7 +37,7 @@
     "react-spring": "^9.7.2",
     "sweetalert2": "^11.7.19",
     "sweetalert2-react-content": "^5.0.7",
-    "three": "^0.154.0"
+    "three": "^0.155.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

@@ -1,6 +1,6 @@
 import React from 'react'
-import { HeadConfig } from '../../components/Layout/HeadConfig'
-import { Project } from '../../components/Projects/Project'
+
+import { Scene } from '../../components/Projects/Scene'
 
 export const metadata = {
   title: 'Projects',
@@ -21,8 +21,8 @@ export const metadata = {
 export default function projects() {
   return (
     <>
+        <Scene />
 
-        <Project />  
     </>
   )
 }
