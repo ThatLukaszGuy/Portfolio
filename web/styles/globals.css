@@ -34,6 +34,10 @@ body,
   scrollbar-width: none;
 }
 
+canvas {
+  touch-action: none!important;
+}
+
 body,#root {
   /*FireFox*/
   scrollbar-width: none;

@@ -1,7 +1,7 @@
+
 import React from 'react'
-
 import { Scene } from '../../components/Projects/Scene'
-
+import { Footer } from "../../components/Layout/Footer";
 export const metadata = {
   title: 'Projects',
   themeColor: '#0f0f0f',
@@ -21,8 +21,10 @@ export const metadata = {
 export default function projects() {
   return (
     <>
+      <div className='w-screen h-screen'>
         <Scene />
-
+      </div>
+      <Footer />
     </>
   )
 }

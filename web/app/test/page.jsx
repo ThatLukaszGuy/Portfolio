@@ -2,14 +2,12 @@
 import React, { Suspense, useEffect,useState } from "react";
 import { Canvas, events, extend, useThree } from "@react-three/fiber";
 import { Text, Effects, PresentationControls, Preload, OrbitControls } from "@react-three/drei";
-import { Street } from "./sceneparts/Street";
-import { Cube } from "./sceneparts/Cube";
-import { Monitor } from './sceneparts/Monitor'
+
 import * as THREE from "three";
 import { UnrealBloomPass } from "three-stdlib";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass";
-import { Nav } from "../Layout/Nav";
-import SceneLoader from "../Layout/SceneLoader";
+
+import SceneLoader from "../../components/Layout/SceneLoader";
 import { useRouter } from "next/navigation";
 
 extend({ UnrealBloomPass, OutputPass });
@@ -33,40 +31,19 @@ function CameraAndModels() {
 
 
   return (
-    <PresentationControls
-    enabled={true} 
-    cursor={true} 
-    makeDefault
-    snap={width > 2.49 ? true : false } 
-    global={true} 
-    zoom={1.8} 
-    rotation={[0, -Math.PI /2, 0]}  
-    polar={[0, Math.PI / 12]} 
-    azimuth={[-Math.PI / 4, Math.PI / 4]}> 
-      <Street/>    
-      <Cube />   
-      
-      <Monitor position={[2,1.4,2]} rotation={[0,4,0]}  onClick={(e) => router.push('/projects/stats')}/>
-      <Text    onClick={(e) => router.push('/projects/stats')} rotation={[0,4,0]}  position={[1.9, 1.4,1.9]} depthTest={false} material-toneMapped={false} font={cFont}  fontSize={0.13} color={'#0c7ca8'}>
-        Stats & Services
-      </Text>
-
-
-      <Monitor position={[2,1.4,-2]} rotation={[0,-0.8,0]}   onClick={(e) => router.push('/projects/all')}/>
-      <Text color={"#0c7ca8"}   onClick={(e) => router.push('/projects/all')} rotation={[0,-0.8,0]}  position={[1.8, 1.4,-1.9]}  font={cFont} fontSize={0.15} >
-        Project List
-      </Text>
+    <PresentationControls>
+        <gridHelper/>
+        <axesHelper/>
     </PresentationControls>
   )
 
 }
 
-export const Scene = () => {
-      
 
-  return (
-    <>    
-        <Suspense fallback={<SceneLoader/>}>
+export default function test() {
+    return (
+        <div>
+            <Suspense fallback={<SceneLoader/>}>
             <Canvas 
             frameloop="always"        
             style={{
@@ -93,12 +70,8 @@ export const Scene = () => {
               <Preload />
             </Canvas>
         </Suspense>
-        <Nav />
-    </>
-  )
+        
+
+        </div>
+    )
 }
-
-{/**
-
-
-*/}
