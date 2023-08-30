@@ -1,7 +1,6 @@
 import React from 'react'
 import Issues from '../../components/Issues/Issues'
 import { Footer } from '../../components/Layout/Footer'
-import { HeadConfig } from '../../components/Layout/HeadConfig'
 import { Nav } from '../../components/Layout/Nav'
 
 export const metadata = {

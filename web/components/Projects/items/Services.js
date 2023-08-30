@@ -1,5 +1,6 @@
 "use client"
-import { Box, SimpleGrid, Icon, Text, Stack, Flex } from "@chakra-ui/react"
+import { useState,useEffect } from "react"
+import { Box, SimpleGrid, Icon, Text, Stack, Flex, SlideFade } from "@chakra-ui/react"
 import {DiCodeBadge,DiRust,DiJsBadge} from 'react-icons/di'
 import styles from '../../TechStack/Tech.module.css'
 
@@ -39,30 +40,46 @@ Add Animation so each pops out from left to right after the other
 */}
 
 export default function Services() {
+
+    const [ isLoaded, setIsLoaded ] = useState(false)
+  
+    useEffect(() => {
+      setIsLoaded(true)
+    },[])
+
     return (
         <Box mb={8}>
-            <Text color={'white'} fontSize='3xl' mb={6}>
-            <span className={styles.blueTS}><span className={styles.hash}>#</span> Contact me to work together on:</span>
-            </Text>
+            <SlideFade in={isLoaded} delay={0.4}>
+                <Text color={'white'} fontSize='3xl' mb={6}>
+                <span className={styles.blueTS}><span className={styles.hash}>#</span> Contact me to work together on:</span>
+                </Text>
+            </SlideFade>
             <SimpleGrid columns={{base: 1, md: 3}} spacing={10}>
+                    
+                <SlideFade in={isLoaded} delay={0.4}>
+                    <Feature 
+                            icon={<Icon as={DiJsBadge} w={8} h={10}/>}
+                            title={"WebApps"}
+                            text={"Compex Fullstack Web Apps. Ranging from small Single Page Apps to more complex Multi Page Apps"}
+                        />
+
+                </SlideFade>
                 
-                <Feature
-                    icon={<Icon as={DiJsBadge} w={8} h={10}/>}
-                    title={"WebApps"}
-                    text={"Compex Fullstack Web Apps. Ranging from small Single Page Apps to more complex Multi Page Apps"}
-                />
-
-                <Feature
-                    icon={<Icon as={DiRust} w={12} h={12}/>}
-                    title={"Utility Scripts"}
-                    text={"Small Automation scripts, CLI Apps or just generally useful tools"}
-                />
-
-                <Feature
-                    icon={<Icon as={DiCodeBadge} w={10} h={10}/>}
-                    title={"Other"}
-                    text={"May include little desktop apps, ML models, games. Contact for further details"}
-                />
+                <SlideFade in={isLoaded} delay={0.6}>
+                    <Feature
+                            icon={<Icon as={DiRust} w={12} h={12}/>}
+                            title={"Utility Scripts"}
+                            text={"Small Automation scripts, CLI Apps or just generally useful tools"}
+                        />
+                </SlideFade>
+                
+                <SlideFade in={isLoaded} delay={0.8}>
+                    <Feature
+                            icon={<Icon as={DiCodeBadge} w={10} h={10}/>}
+                            title={"Other"}
+                            text={"May include little desktop apps, ML models, games. Contact for further details"}
+                        />
+                </SlideFade>
 
             </SimpleGrid>
         </Box>

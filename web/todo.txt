@@ -1,2 +1,1 @@
-- for singular projects add full screen image preview
 - better 404 page

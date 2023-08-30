@@ -2,7 +2,6 @@ import React from 'react'
 import { Contact } from '../../components/Contact/Contact'
 import { Footer } from '../../components/Layout/Footer'
 import { Nav } from '../../components/Layout/Nav'
-import { HeadConfig } from '../../components/Layout/HeadConfig'
 import '../../styles/globals.css'
 
 export const metadata = {

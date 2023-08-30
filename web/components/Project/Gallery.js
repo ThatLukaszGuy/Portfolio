@@ -3,9 +3,6 @@ import dynamic from 'next/dynamic'
 import React, {Suspense} from 'react'
 import { Loader } from '../../components/Layout/Loader'
 
-const ReactIntense = dynamic(() => import('react-intense'), {
-  ssr:false
-})
 
 export const Gallery = ({ cover, images }) => {
 
