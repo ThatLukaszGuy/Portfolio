@@ -7,6 +7,7 @@ import Cstyles from '../../Contact/Contact.module.css'
 import axios from 'axios';
 import Repo from './Repo'
 import Tstyles from '../../TechStack/Tech.module.css'
+import Services from './Services'
 
 
 export default function StatLayout() {
@@ -40,6 +41,7 @@ export default function StatLayout() {
      // getting user data
      axios.get(userUrl).then((res) => {
        setUserData(res.data)
+       console.log(res.data)
      })
 
     
@@ -60,7 +62,7 @@ export default function StatLayout() {
             <SlideFade in={isLoaded} delay={0.4}>   
                 <div className='pt-[150px] text-center '>
                     <div className='text-center font-bold text-4xl sm:text-5xl md:text-7xl pinkTS'>
-                      # Stats
+                      # Stats & Services
                     </div>
                 </div>
             </SlideFade >
@@ -74,6 +76,7 @@ export default function StatLayout() {
         <div className='pt-[189px] bg-gray-800'>
           <div className={Tstyles.techbg}>
             <Container  maxW={'4xl'} >
+              <Services />
               <Stats stars={stars} userData={userData} repoData={repoData}/>
               <Divider mt={8} mb={4}/>
               <Repo data={repoData}/>

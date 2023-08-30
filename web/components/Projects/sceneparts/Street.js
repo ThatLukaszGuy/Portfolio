@@ -10,6 +10,8 @@ Title: FREE - SkyBox Dystopian Alleyway
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
+
+
 export function Street(props) {
   const { nodes, materials } = useGLTF("../models/street.glb");
   return (
@@ -20,6 +22,8 @@ export function Street(props) {
           material={materials["Scene_-_Root"]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={500}
+             
+          
         >
         </mesh>
       </group>

@@ -15,7 +15,7 @@ export function Model(props) {
     "models/head_of_michelangelos_david_optimised.glb"
   );
   const group = useRef()
-  const [boxRef,boxApi] = useBox(() => ({ mass: 1, position: [0.7,7, 1.2] }))
+  const [boxRef,boxApi] = useBox(() => ({ mass: 1000, position: [0.7,7, 1.2]}))
   // hover
   const [hovered, setHovered] = useState(false)
   

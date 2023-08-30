@@ -44,7 +44,9 @@ export function Monitor(props) {
             geometry={nodes.InFrame_inframe_0.geometry}
             material={materials.inframe}
             position={[0, 0, -1]}
-          />
+          >
+
+          </mesh>
           <mesh
             castShadow
             receiveShadow

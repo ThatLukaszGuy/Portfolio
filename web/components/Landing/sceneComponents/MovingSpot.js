@@ -11,5 +11,5 @@ export function MovingSpot({ vec = new Vector3(), ...props }) {
       light.current.target.position.lerp(vec.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * viewport.height) / 2, 0), 0.1)
       light.current.target.updateMatrixWorld()
     })
-    return <SpotLight castShadow ref={light} penumbra={0} distance={6} angle={0.35} attenuation={5} anglePower={4} intensity={20} {...props} />
+    return <SpotLight castShadow ref={light} penumbra={0} distance={6} angle={0.35} attenuation={5} anglePower={4} intensity={30} {...props} />
   }
