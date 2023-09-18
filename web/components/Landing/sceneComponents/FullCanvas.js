@@ -17,11 +17,11 @@ export const FullCanvas = () => {
 
 
         <Suspense fallback={<SceneLoader />}>
-        <Canvas dpr={[1, 2]} camera={{ position: [-2, 2, 6], fov: 50, near: 1, far: 20 }} style={{ height:'100vh' ,width:'100vw' , zIndex: '1', background: 'black'}}>
+        <Canvas  frameloop="demand" gl={{ antialias: true }} performance={{ min: 0.3 }} dpr={[1, 2]} camera={{ position: [-2, 2, 6], fov: 50, near: 1, far: 20 }} style={{ height:'100vh' ,width:'100vw' , zIndex: '1', background: 'black'}}>
         
         <color attach="background" args={['#202020']} />
             <fog attach="fog" args={['#202020', 5, 20]} />
-              <ambientLight intensity={0} />
+
               <Stripe  factor={1}  color="#000000" position={[0, 1, -5]} />
   
             <Scene />

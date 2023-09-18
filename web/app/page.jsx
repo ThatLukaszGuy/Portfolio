@@ -1,8 +1,9 @@
 import { Loader } from "../components/Layout/Loader"
 
+ 
 export const metadata = {
-  title: 'Loading...',
-  themeColor: '#2f3136',
+  title: 'ThatLukaszGuy',
+  themeColor: '#0f0f0f',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],
@@ -16,7 +17,6 @@ export const metadata = {
   manifest: 'favicon/site.webmanifest'
 
 }
-
 export default function Page() {
     return <Loader />
   }
