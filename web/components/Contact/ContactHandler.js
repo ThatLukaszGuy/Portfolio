@@ -9,7 +9,8 @@ import {
     Input,
     Select,
     Textarea,
-    Stack
+    Stack,
+    Text
 } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
@@ -85,15 +86,21 @@ export const ContactHandler = () => {
         <Heading  lineHeight={1.1} className='pinkTS' fontSize={{ base: '2xl', md: '3xl' }}>
           Get in Touch
         </Heading>
+        <Text textColor={"gray.300"} fontStyle={'italic'}>Contact form temporarily disabled, for contact see Github</Text>
         <form ref={form} onSubmit={sendEmail}> 
+        
+        {/** isDisabled={true} form blocked until DSVGO is sorted */}
+        
         <FormControl id="password" isRequired>
-          <FormLabel>Name</FormLabel>
-          <Input name='name' type="text" placeholder='Your Name' focusBorderColor='tailwindPink.500' _placeholder={{ color: 'gray.400' }}/>
+          <FormLabel >Name</FormLabel>
+          <Input name='name' isDisabled={true} type="text" placeholder='Your Name' focusBorderColor='tailwindPink.500' _placeholder={{ color: 'gray.400' }}/>
         </FormControl>
 
         <FormControl id="email" isRequired mt={2}>
           <FormLabel>Email address</FormLabel>
           <Input
+
+          isDisabled={true}
           name='email'
 
             placeholder="your-email@example.com"
@@ -105,7 +112,7 @@ export const ContactHandler = () => {
         
         <FormControl isRequired mt={2}>
             <FormLabel>Reason</FormLabel>
-            <Select name='reason'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'>
+            <Select             isDisabled={true} name='reason'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'>
                 <option value='casual' className='text-gray-900'>Casual</option>
                 <option value='work' className='text-gray-900'>Work</option>
                 <option value='other' className='text-gray-900'>Other</option>
@@ -115,7 +122,7 @@ export const ContactHandler = () => {
         
         <FormControl mt={2}>
             <FormLabel>Details</FormLabel>
-            <Textarea className='resize-none' name='details' placeholder='Some Details...'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'/>
+            <Textarea             isDisabled={true} className='resize-none' name='details' placeholder='Some Details...'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'/>
         </FormControl>
         
 
@@ -125,6 +132,7 @@ export const ContactHandler = () => {
             type='submit'
             mt={2}
             w={'full'}
+            isDisabled={true}
             >
             Submit
           </Button> 

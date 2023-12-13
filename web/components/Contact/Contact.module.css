@@ -32,7 +32,7 @@
 
 .csd {
     position: absolute;
-    bottom:739px;
+    bottom:780px; /* 739*/
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -53,7 +53,23 @@
 }
 @media only screen and (max-width: 768px) {
     .csd {
-        bottom: 814px;
+        bottom: 855px /*814*/
+    }
+
+}
+
+/*only needed until form is fixed*/
+
+@media only screen and (max-width: 461px) {
+    .csd {
+        bottom: 877px /*814*/
+    }
+
+}
+
+@media only screen and (max-width: 281px) {
+    .csd {
+        bottom: 901px /*814*/
     }
 
 }
