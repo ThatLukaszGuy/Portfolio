@@ -11,9 +11,13 @@ export async function getProjects() {
   return  JSON.parse(JSON.stringify(projects)) 
 }
 
+export const viewport = {
+  themeColor: '#36393f',
+}
+ 
+
 export const metadata = {
   title: 'Projects',
-  themeColor: '#36393f',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

@@ -17,10 +17,10 @@ export const Ground = () => {
     }))
 
   return (
-    <mesh receiveShadow position={[0, -1.5, 0.5]} rotation={[-Math.PI / 2, 0, 0]}>
+    <mesh dispose={null}  position={[0, -1.5, 0.5]} rotation={[-Math.PI / 2, 0, 0]}>
           
         <planeGeometry args={[30, 30]} />
-        <meshPhongMaterial 
+        <meshStandardMaterial
         envMapIntensity={0}  
             normalMap={normalMap}
             roughness={0}

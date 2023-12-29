@@ -19,15 +19,15 @@ export function Scene() {
   }, [counter]);
   
 
-    const depthBuffer = useDepthBuffer({ frames: 1 })
+    const depthBuffer = useDepthBuffer({ frames: 1 }) // this causes the issues related to the feedback loop
     return (
       <>
-        <MovingSpot depthBuffer={depthBuffer} color="#0c8cbf" position={[3, 3, 2]} />
-        <MovingSpot depthBuffer={depthBuffer} color="#b00c3f" position={[1, 3, 0]} />   
-
+        <MovingSpot color="#0c8cbf" position={[3, 3, 2]} />
+        <MovingSpot  color="#b00c3f" position={[1, 3, 0]} />   
+     
         <Physics>
-          {done ? <Fracture playAnim={false} scale={0.025}  /> : null}
-          <Fracture playAnim={true} scale={0.025} position={[-3,-1.5,-0.4]} rotation={[0, 1.2, 0]} />   
+        {done ? <Fracture playAnim={false} scale={0.025} dispose={null}  /> : null}
+          <Fracture playAnim={true} scale={0.025} position={[-3,-1.5,-0.4]} rotation={[0, 1.2, 0]}  dispose={null}/>   
           <Ground />
         </Physics>
 

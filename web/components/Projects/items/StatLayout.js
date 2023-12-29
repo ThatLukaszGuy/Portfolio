@@ -1,13 +1,15 @@
 "use client"
-import { Stats } from './Stats'
+import { Stats } from './Statboxes/Stats'
 import React,{ useState,useEffect } from 'react'
 import { Container, Divider, Image, SlideFade } from '@chakra-ui/react'
 import styles from '../Projects.module.css'
 import Cstyles from '../../Contact/Contact.module.css'
 import axios from 'axios';
-import Repo from './Repo'
+import Repo from './Statboxes/Repo'
 import Tstyles from '../../TechStack/Tech.module.css'
-import Services from './Services'
+import Services from './Statboxes/Services'
+import Certificates from './Statboxes/Certficates'
+import Work from './Statboxes/Work'
 
 
 export default function StatLayout() {
@@ -79,6 +81,9 @@ export default function StatLayout() {
               <Services />
               <Stats stars={stars} userData={userData} repoData={repoData}/>
               <Divider mt={8} mb={4}/>
+              <Certificates />
+              <Work />
+              <Divider my={8}/>
               <Repo data={repoData}/>
             </Container>
           </div>

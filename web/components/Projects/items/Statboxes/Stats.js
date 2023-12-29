@@ -10,8 +10,8 @@ import {
   import { BsFillBookmarksFill } from 'react-icons/bs';
 import { MdGroup } from 'react-icons/md';
 import { AiFillStar } from 'react-icons/ai'
-import { CustomLoader } from '../../Layout/CustomLoader';
-import styles from '../../TechStack/Tech.module.css'
+import { CustomLoader } from '../../../Layout/CustomLoader';
+import styles from '../../../TechStack/Tech.module.css'
 
 
 const StatCard = ({ title,label,  icon }) => {
@@ -53,15 +53,6 @@ const StatCard = ({ title,label,  icon }) => {
 
 
 export const Stats = ({ stars, repoData, userData }) => {
-  
-    
-
-
-    
-
-
-
-  
   
     return (
     

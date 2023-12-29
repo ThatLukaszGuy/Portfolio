@@ -43,7 +43,7 @@ export const Info = () => {
                             
                         </Button>
 
-                        <Link href={'/projects'}>
+                        <Link href={'/projects/all'}>
                             <Button   size={{ base: 'sm', sm: 'md' }} rightIcon={<FaArrowRight />} ml={{ md: 4,base: 8 }} mt={5} colorScheme='customBlue' variant='outline' className='hover:bg-gray-800 blueBtn'>                           
                                 See Projects
                             </Button>

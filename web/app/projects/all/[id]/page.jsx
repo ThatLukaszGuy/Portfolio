@@ -20,11 +20,15 @@ export async function getProjectById(id) {
     }
   }
 
+  export const viewport = {
+    themeColor: '#2f3136',
+  }
+   
+
 export async function generateMetadata({params}) {
     const project = await getProjectById(params.id)
     return {
         title: project.name,
-        themeColor: '#2f3136',
         description: "An interactive, modern Portfolio website showcasing the author's projects",
         author: 'ThatLukaszGuy',
         keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

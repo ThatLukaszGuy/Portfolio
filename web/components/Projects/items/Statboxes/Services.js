@@ -2,7 +2,7 @@
 import { useState,useEffect } from "react"
 import { Box, SimpleGrid, Icon, Text, Stack, Flex, SlideFade } from "@chakra-ui/react"
 import {DiCodeBadge,DiRust,DiJsBadge} from 'react-icons/di'
-import styles from '../../TechStack/Tech.module.css'
+import styles from '../../../TechStack/Tech.module.css'
 
 const Feature = ({title, text, icon}) => {
     return (

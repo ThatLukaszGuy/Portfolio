@@ -1,10 +1,14 @@
 "use client"
 import React,{ Suspense } from 'react'
-import { Canvas} from '@react-three/fiber'
+import { Canvas,extend} from '@react-three/fiber'
 import { Scene } from './Scene'
 import { ScaleLoader } from 'react-spinners'
+import { OrbitControls, Stars,Effects, Sparkles,Cloud } from '@react-three/drei'
+import { UnrealBloomPass } from "three-stdlib";
+import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass";
+import * as THREE from "three";
 
-
+extend({ UnrealBloomPass, OutputPass });
 
 
 export const FullCanvas = () => {
@@ -17,14 +21,26 @@ export const FullCanvas = () => {
 
 
         <Suspense fallback={<SceneLoader />}>
-        <Canvas  frameloop="demand" gl={{ antialias: true }} performance={{ min: 0.3 }} dpr={[1, 2]} camera={{ position: [-2, 2, 6], fov: 50, near: 1, far: 20 }} style={{ height:'100vh' ,width:'100vw' , zIndex: '1', background: 'black'}}>
-        
+        <Canvas  
+          frameloop="demand" 
+          gl={{ antialias: true }} 
+          performance={{ min: 0.3 }} dpr={[1, 2]} 
+          camera={{ position: [-2, 2, 6], fov:50, near:1,far:20 }} 
+          style={{ height:'100vh' ,width:'100vw' , zIndex: '1', background: 'black'}}>
+        <color attach="background" args={['#000000']} />       
+{/** 
         <color attach="background" args={['#202020']} />
             <fog attach="fog" args={['#202020', 5, 20]} />
 
+*  camera={{ position: [-2, 2, 6], fov: 50, near: 1, far: 20 }} 
               <Stripe  factor={1}  color="#000000" position={[0, 1, -5]} />
-  
-            <Scene />
+  */}              
+           
+           <Sparkles count={30} scale={7} size={5} color={'#0c8cbf'}/>
+           <Sparkles count={30} scale={7} size={4} color={'#b00c3f'}/>
+           <Scene />
+
+
         </Canvas>
 
         </Suspense>
@@ -32,17 +48,7 @@ export const FullCanvas = () => {
     </div>
   )
 }
-function Stripe({ color = 'white', factor = 1, ...props }) {
-  
-  
-  
-  return (
-    <mesh  scale={[50, 50, 50]} {...props}  rotation-x={[-0.4]} >
-      <planeGeometry />
-      <meshBasicMaterial color={color} />
-    </mesh>
-  )
-}
+
 
 function SceneLoader() {
   return (

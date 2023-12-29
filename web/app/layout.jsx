@@ -7,7 +7,6 @@ import {Suspense} from 'react'
 
 export const metadata = {
   title: 'ThatLukaszGuy',
-  themeColor: '',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

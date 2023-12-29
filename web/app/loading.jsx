@@ -1,8 +1,12 @@
 import { Loader } from "../components/Layout/Loader"
 
+export const viewport = {
+  themeColor:  '#2f3136',
+}
+ 
+
 export const metadata = {
   title: 'Loading...',
-  themeColor: '#2f3136',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

@@ -4,9 +4,13 @@ import { Footer } from '../../components/Layout/Footer'
 import { Nav } from '../../components/Layout/Nav'
 import '../../styles/globals.css'
 
+export const viewport = {
+  themeColor: '#2f3136',
+}
+ 
+
 export const metadata = {
   title: 'Contact',
-  themeColor: '#2f3136',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

@@ -3,9 +3,13 @@ import { Footer } from '../../../components/Layout/Footer'
 import { Nav } from '../../../components/Layout/Nav'
 import StatLayout from '../../../components/Projects/items/StatLayout'
 
+export const viewport = {
+  themeColor: '#36393f',
+}
+ 
+
 export const metadata = {
   title: 'Stats',
-  themeColor: '#36393f',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

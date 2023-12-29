@@ -3,9 +3,13 @@ import { Footer } from '../components/Layout/Footer'
 import { Nav } from '../components/Layout/Nav'
 import { NotFound } from '../components/Layout/NotFound'
 
+export const viewport = {
+  themeColor: '#2f3136',
+}
+ 
+
 export const metadata = {
   title: '404',
-  themeColor: '#2f3136',
   description: "An interactive, modern Portfolio website showcasing the author's projects",
   author: 'ThatLukaszGuy',
   keywords: ['Portfolio', 'NextJS', 'Developer', 'Webdev', 'Fullstack'],

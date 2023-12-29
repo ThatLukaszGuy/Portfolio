@@ -1,7 +1,7 @@
 "use client"
 import React, { Suspense, useEffect,useState } from "react";
-import { Canvas, extend} from "@react-three/fiber";
-import { Text, Effects,  OrbitControls, Text3D } from "@react-three/drei";
+import { Canvas, extend, useThree} from "@react-three/fiber";
+import { Text, Effects,  OrbitControls, Text3D, Preload } from "@react-three/drei";
 import { Street } from "./sceneparts/Street";
 import { Cube } from "./sceneparts/Cube";
 import { Monitor } from './sceneparts/Monitor'
@@ -46,8 +46,6 @@ export const Scene = () => {
         return () => document.body.style.cursor = 'auto';        
   }, [hovered])
 
-
-
   return (
     <>    
         <Suspense fallback={<SceneLoader/>}>
@@ -76,7 +74,10 @@ export const Scene = () => {
                   <Cube />   
                   
 
-                  <Monitor position={[2,1.4,2]}  onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}   rotation={[0,4,0]} onClick={(e) => router.push('/projects/stats')}/>
+                  <Monitor position={[2,1.4,2]}  onPointerOver={() => {
+                    setHovered(true)
+                  }} 
+                  onPointerOut={() => setHovered(false)}   rotation={[0,4,0]} onClick={(e) => router.push('/projects/stats')}/>
                   <TextInstance text={"Stats & Services"} scale={0.1} rotation={[0,4,0]} position={[2.3, 1.35,1.3]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} onClick={(e) => router.push('/projects/stats')}/>
 
                   <hemisphereLight intensity={1} groundColor="black" />
@@ -105,7 +106,7 @@ export const Scene = () => {
 
                   <ambientLight intensity={1} />
 
-
+                <Preload all />
             </Canvas>
         </Suspense>
         <Nav />

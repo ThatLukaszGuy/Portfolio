@@ -154,6 +154,51 @@ a.top-right {
   font-family: cyber;
 }
 
+.landing-p:hover {
+  cursor:pointer;
+}
+
+.landing-subheader {
+  font-weight: 500;
+  color: #d4d7dc;
+  font-size: 1.1rem;
+}
+/*span for diff landing subheads*/
+.sd-span {
+  border-bottom: #b31a57;
+  border-bottom-width: 3px;
+  border-style: dashed;
+  position: relative;
+}
+
+.sd-span:hover, .d-span:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #b31a57;
+  top: -2px;
+}
+
+.ph-span {
+  position: relative;
+  border-bottom: #0c8cbf;
+  border-bottom-width: 3px;
+  border-style: solid;
+}
+
+.ph-span:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #0c8cbf;
+  top: -2px;
+}
+
+.d-span {
+  position: relative;
+  border-bottom: #b31a57;
+  border-bottom-width: 3px;
+  border-style: dashed;
+}
+
 
 p.bottom-left {
   bottom: 60px;
@@ -422,6 +467,11 @@ box-shadow: 5px 5px 0px 0px #f1f5f9, 10px 10px 0px 0px #f8fafc, 6px 6px 16px -6p
       left: 20px!important;
 
     }
+
+    .landing-subheader {
+      left: 20px!important;
+    }
+
     .l-git {
       top: 30px !important;
       border-radius: 10px;

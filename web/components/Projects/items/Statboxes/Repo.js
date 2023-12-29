@@ -1,6 +1,6 @@
 import React,{useRef} from 'react'
 import { Text,Box,Flex, Link,SlideFade} from '@chakra-ui/react'
-import styles from '../../TechStack/Tech.module.css'
+import styles from '../../../TechStack/Tech.module.css'
 import Swal from 'sweetalert2'
 import { useInViewport } from 'react-in-viewport'
 
