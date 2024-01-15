@@ -12,7 +12,7 @@ import { Nav } from "../Layout/Nav";
 import SceneLoader from "../Layout/SceneLoader";
 import { useRouter } from "next/navigation";
 import InfoText from "./sceneparts/InfoText";
-import { NeonSign } from "./sceneparts/NeonSign";
+
 
 
 extend({ UnrealBloomPass, OutputPass });
@@ -61,6 +61,7 @@ export const Scene = () => {
                 position: "absolute",
                 overflowY: 'hidden'
             }}
+          
             dpr={[1, 2]}  camera={{ fov: 90, position: [0, 0, -1.5], rotation:[0, -Math.PI /2, 0]}}
             >
 
@@ -83,7 +84,7 @@ export const Scene = () => {
                   <hemisphereLight intensity={1} groundColor="black" />
                   <spotLight position={[0, 0, 0]} angle={0.12} penumbra={1} intensity={7} castShadow shadow-mapSize={1024} />
 
-                  <NeonSign position={[1.05, 1.4,-2.7]} rotation={[0,0,0]}/>
+
                   <Monitor position={[2,1.4,-2]}  onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}  rotation={[0,-0.8,0]} onClick={(e) => router.push('/projects/all')}/>
                   <TextInstance text={"P|Rojects"} scale={0.1} rotation={[0,-0.8,0]}  position={[1.6, 1.35,-2.2]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} onClick={(e) => router.push('/projects/all')}/>
                         
