@@ -32,7 +32,7 @@
 
 .csd {
     position: absolute;
-    bottom:780px; /* 739*/
+    bottom:864px; /* 739*/
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -53,23 +53,35 @@
 }
 @media only screen and (max-width: 768px) {
     .csd {
-        bottom: 855px /*814*/
+        bottom: 865px /*814*/
     }
 
 }
 
-/*only needed until form is fixed*/
-
-@media only screen and (max-width: 461px) {
+@media only screen and (max-width: 767px) {
     .csd {
-        bottom: 877px /*814*/
+        bottom: 937px 
     }
 
 }
 
-@media only screen and (max-width: 281px) {
+@media only screen and (max-width: 305px) {
     .csd {
-        bottom: 901px /*814*/
+        bottom: 961px 
+
+}
+}
+
+@media only screen and (max-width: 237px) {
+    .csd {
+        bottom: 985px 
+    }
+
+}
+
+@media only screen and (max-width: 207px) {
+    .csd {
+        bottom: 1013px 
     }
 
 }
