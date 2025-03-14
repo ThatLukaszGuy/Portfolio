@@ -12,19 +12,23 @@ export const Footer = () => {
     const license = () => {
         Swal.fire({
             icon: 'info',
+            iconColor: '#0c8cbf',
             title: 'License',
             text: 'This Page is distributed under the MIT license. Aka if u want to do something with it, go for it.',
             showCancelButton: true,
             confirmButtonText: 'Full License',
-            confirmButtonColor: '#64748b',
+            confirmButtonColor: '#4f545c', // gray 600//'#64748b',
+            color: '#e3e5e8',
             showCloseButton: true,
-            cancelButtonColor: '#289FED',
+            background: '#202225',
+            cancelButtonColor: '#0c8cbf', // '#289FED', 
             cancelButtonText: 'I understand'
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 Swal.fire({
                     icon: 'info',
+                    iconColor: '#0c8cbf',
                     title: 'MIT License',
                     html:
                         `Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +48,9 @@ export const Footer = () => {
                         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
                         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                         SOFTWARE.`,
-                    confirmButtonColor: '#64748b',
+                    confirmButtonColor: '#4f545c',
+                    color: '#e3e5e8',
+                    background: '#202225',
                     confirmButtonText: 'Close',
                     showCloseButton: true,
                     footer: 'Copyright © 2022 ThatLukaszGuy'

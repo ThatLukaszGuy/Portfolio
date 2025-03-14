@@ -1,0 +1,5 @@
+14.3
+- updated pop/alert windows (make colors fit site theme) (at /contact, at footer, at /issues, /projects, /projects/all/:id)
+- contact page update 
+- optimization of models +24mb -> 6mb  
+- removed pieces of old/unused/redundant code

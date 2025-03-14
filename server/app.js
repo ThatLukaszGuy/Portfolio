@@ -35,5 +35,5 @@ const PORT = process.env.PORT || 3000
 
 // server
 app.listen(PORT, () => {
-    console.log(`App running on port: ${PORT}`)
+    console.log(`App running on port: ${PORT}, http://localhost:8080/`)
 })

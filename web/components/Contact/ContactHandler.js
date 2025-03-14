@@ -10,7 +10,8 @@ import {
     Select,
     Textarea,
     Stack,
-    Text
+    Text,
+    Switch,
 } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
@@ -37,19 +38,24 @@ export const ContactHandler = () => {
                 title:'Form Submitted',
                 text:'Everything went well and your form has been submitted.',
                 icon:'success',
-                confirmButtonColor: '#198754',
+                iconColor: '#831843',
+                confirmButtonColor: '#831843',
                 allowOutsideClick: false,
-                allowEscapeKey: false
+                allowEscapeKey: false,
+                background: '#202225',
+                color: '#e3e5e8',
             }) 
-            
         }, (error) => {
             Swal.fire({
                 title:'An error occurred',
                 text:"Something happened and you form couldn't be submitted. Try again later",
                 icon:'error',
-                confirmButtonColor: '#d33',
+                iconColor: '#831843',
+                confirmButtonColor: '#831843',
                 allowOutsideClick: false,
-                allowEscapeKey: false
+                allowEscapeKey: false,
+                background: '#202225',
+                color: '#e3e5e8',
             })
         });
         form.current.reset()
@@ -86,21 +92,20 @@ export const ContactHandler = () => {
         <Heading  lineHeight={1.1} className='pinkTS' fontSize={{ base: '2xl', md: '3xl' }}>
           Get in Touch
         </Heading>
-        <Text textColor={"gray.300"} fontStyle={'italic'}>Contact form temporarily disabled, for contact see Github</Text>
         <form ref={form} onSubmit={sendEmail}> 
         
-        {/** isDisabled={true} form blocked until DSVGO is sorted */}
+        {/** isDisabled={true} form blocked until DSVGO is sorted - swiss so =false */}
         
         <FormControl id="password" isRequired>
           <FormLabel >Name</FormLabel>
-          <Input name='name' isDisabled={true} type="text" placeholder='Your Name' focusBorderColor='tailwindPink.500' _placeholder={{ color: 'gray.400' }}/>
+          <Input name='name' isDisabled={false} type="text" placeholder='Your Name' focusBorderColor='tailwindPink.500' _placeholder={{ color: 'gray.400' }}/>
         </FormControl>
 
         <FormControl id="email" isRequired mt={2}>
           <FormLabel>Email address</FormLabel>
           <Input
 
-          isDisabled={true}
+          isDisabled={false}
           name='email'
 
             placeholder="your-email@example.com"
@@ -112,8 +117,8 @@ export const ContactHandler = () => {
         
         <FormControl isRequired mt={2}>
             <FormLabel>Reason</FormLabel>
-            <Select             isDisabled={true} name='reason'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'>
-                <option value='casual' className='text-gray-900'>Casual</option>
+            <Select             isDisabled={false} name='reason'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'>
+            
                 <option value='work' className='text-gray-900'>Work</option>
                 <option value='other' className='text-gray-900'>Other</option>
             </Select>
@@ -122,17 +127,21 @@ export const ContactHandler = () => {
         
         <FormControl mt={2}>
             <FormLabel>Details</FormLabel>
-            <Textarea             isDisabled={true} className='resize-none' name='details' placeholder='Some Details...'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'/>
+            <Textarea             isDisabled={false} className='resize-none' name='details' placeholder='Some Details...'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'/>
         </FormControl>
         
-
+        <FormControl isRequired mt={2}>
+            <FormLabel htmlFor="switch">Privacy policy</FormLabel>
+            <Text textColor={"gray.300"} fontStyle={'italic'}>I have read and made myself familiar with the privacy policy of this site.</Text>
+            <Switch my={2} id="switch" colorScheme='tailwindPink'  _placeholder={{ color: 'gray.400' }} focusBorderColor='tailwindPink.500'  />
+          </FormControl>
         
           <Button
             colorScheme={'tailwindPink'}
             type='submit'
             mt={2}
             w={'full'}
-            isDisabled={true}
+            isDisabled={false}
             >
             Submit
           </Button> 

@@ -22,10 +22,31 @@ import {
 import ProjectCarousel from "./ProjectCarousel";
 import { AiFillGithub ,AiOutlineArrowRight} from 'react-icons/ai'
 import { BiWorld } from 'react-icons/bi'
+import Swal from 'sweetalert2'
 
 
 
 export default function Carousel({projectsProps}) {
+
+  const noLinkAlert = () => {
+    Swal.fire({
+      title: 'No deployment',
+      text: "The deployment of this project does not seem to be a website. Check out the repo if u want to try out the project.",
+      icon: 'info',
+      showCancelButton: true,
+      background: '#202225',
+      iconColor: '#0c8cbf',
+      color: '#e3e5e8',
+      confirmButtonColor: '#0c8cbf',
+      cancelButtonColor: '#4f545c',
+      cancelButtonText: 'Close',
+      confirmButtonText: 'See Repo'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.open(links.github, '_blank')
+      }
+    })
+  }
 
   return (
 
@@ -98,7 +119,7 @@ export default function Carousel({projectsProps}) {
                 <Flex direction={'row'} justify={'space-between'} mt={5}>
                   <ButtonGroup size='md' isAttached >
                       <IconButton aria-label='Add to friends' bg={'black'} color='white' _hover={{ bg: 'gray.900' }} icon={<AiFillGithub />} onClick={() => window.open(project.links.github, '_blank')}/>
-                      <IconButton aria-label='Add to friends' bg={'blue.500'} color='white' _hover={{ bg: 'blue.600' }} icon={<BiWorld />} onClick={() => window.open(project.links.deployment, '_blank')}/>
+                      <IconButton aria-label='Add to friends' bg={'blue.500'} color='white' _hover={{ bg: 'blue.600' }} icon={<BiWorld />} onClick={project.links.deployment == 'nolink' ? () => noLinkAlert() : () => window.open(project.links.deployment, '_blank' )}/>
                   </ButtonGroup>
                     <Link href={'/projects/all/' + project._id}>
                      

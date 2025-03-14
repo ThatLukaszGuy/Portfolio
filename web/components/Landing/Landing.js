@@ -5,7 +5,6 @@ import { FullCanvas } from './sceneComponents/FullCanvas'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import { Nav } from '../Layout/Nav'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 export const Landing = () => {
 
@@ -65,7 +64,7 @@ export const Landing = () => {
          }
         }}
       
-      >I&apos;m Łukasz, a <span className='sd-span' onClick={() => window.location.href = '#about'}> software developer</span>, <Link href={'/not-yet'}><span className='ph-span' onClick={() => window.location.href = '#'}> patent holder </span></Link>
+      >I&apos;m Łukasz, a <span className='sd-span' onClick={() => window.location.href = '#about'}> software developer</span>, <span className='ph-span' onClick={() => window.location.href = '#'}>student </span>
       <br></br> and <span className='d-span' onClick={() => window.location.href = '#about'}>designer</span> from Poland.
       </motion.p>
 

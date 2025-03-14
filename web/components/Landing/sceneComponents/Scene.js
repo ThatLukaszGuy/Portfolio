@@ -3,7 +3,8 @@ import {  useDepthBuffer } from '@react-three/drei'
 import { Ground } from './Ground'
 import { MovingSpot } from './MovingSpot'
 import { Physics } from '@react-three/cannon'
-import { Fracture } from './FracturedHead'
+
+import { Head } from './Head'
 
 export function Scene() {
 
@@ -26,8 +27,8 @@ export function Scene() {
         <MovingSpot  color="#b00c3f" position={[1, 3, 0]} />   
      
         <Physics>
-        {done ? <Fracture playAnim={false} scale={0.025} dispose={null}  /> : null}
-          <Fracture playAnim={true} scale={0.025} position={[-3,-1.5,-0.4]} rotation={[0, 1.2, 0]}  dispose={null}/>   
+        {done ? <Head playAnim={false} scale={0.025} dispose={null}  /> : null}
+          <Head playAnim={true} scale={0.025} position={[-3,-1.5,-0.4]} rotation={[0, 1.2, 0]}  dispose={null}/>   
           <Ground />
         </Physics>
 

@@ -3,8 +3,9 @@ import React, { Suspense, useEffect,useState } from "react";
 import { Canvas, extend, useThree} from "@react-three/fiber";
 import { Text, Effects,  OrbitControls, Text3D, Preload } from "@react-three/drei";
 import { Street } from "./sceneparts/Street";
+
 import { Cube } from "./sceneparts/Cube";
-import { Monitor } from './sceneparts/Monitor'
+import { CMonitor } from './sceneparts/CMonitor'
 import * as THREE from "three";
 import { UnrealBloomPass } from "three-stdlib";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass";
@@ -75,7 +76,7 @@ export const Scene = () => {
                   <Cube />   
                   
 
-                  <Monitor position={[2,1.4,2]}  onPointerOver={() => {
+                  <CMonitor position={[2,1.4,2]}  onPointerOver={() => {
                     setHovered(true)
                   }} 
                   onPointerOut={() => setHovered(false)}   rotation={[0,4,0]} onClick={(e) => router.push('/projects/stats')}/>
@@ -85,7 +86,7 @@ export const Scene = () => {
                   <spotLight position={[0, 0, 0]} angle={0.12} penumbra={1} intensity={7} castShadow shadow-mapSize={1024} />
 
 
-                  <Monitor position={[2,1.4,-2]}  onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}  rotation={[0,-0.8,0]} onClick={(e) => router.push('/projects/all')}/>
+                  <CMonitor position={[2,1.4,-2]}  onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}  rotation={[0,-0.8,0]} onClick={(e) => router.push('/projects/all')}/>
                   <TextInstance text={"P|Rojects"} scale={0.1} rotation={[0,-0.8,0]}  position={[1.6, 1.35,-2.2]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} onClick={(e) => router.push('/projects/all')}/>
                         
                 </group>

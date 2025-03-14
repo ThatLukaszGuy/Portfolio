@@ -31,22 +31,28 @@ export const Form = () => {
       emailjs.sendForm(serviceId, templateId, form.current, 'baRTTaiS5YosRINb6')
         .then((success) => {
             Swal.fire({
-                title:'Form Submitted',
-                text:'Everything went well and your form has been submitted.',
-                icon:'success',
-                confirmButtonColor: '#198754',
-                allowOutsideClick: false,
-                allowEscapeKey: false
+              title:'Form Submitted',
+              text:'Everything went well and your form has been submitted.',
+              icon:'success',
+              iconColor: '#831843',
+              confirmButtonColor: '#831843',
+              allowOutsideClick: false,
+              allowEscapeKey: false,
+              background: '#202225',
+              color: '#e3e5e8',
             }) 
             
         }, (error) => {
             Swal.fire({
-                title:'An error occurred',
-                text:"Something happened and you form couldn't be submitted. Try again later",
-                icon:'error',
-                confirmButtonColor: '#d33',
-                allowOutsideClick: false,
-                allowEscapeKey: false
+              title:'An error occurred',
+              text:"Something happened and you form couldn't be submitted. Try again later",
+              icon:'error',
+              iconColor: '#831843',
+              confirmButtonColor: '#831843',
+              allowOutsideClick: false,
+              allowEscapeKey: false,
+              background: '#202225',
+              color: '#e3e5e8',
             })
         });
         form.current.reset()
