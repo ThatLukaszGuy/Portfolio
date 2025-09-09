@@ -24,6 +24,18 @@ export default function Certificates() {
                   link={'https://www.freecodecamp.org/certification/thatlukaszguy/back-end-development-and-apis'}
                   short={'fcc'}
                   />
+                <Cert 
+                  title={"FreeCodeCamp: Legacy JavaScript Algorithms and Datastructures"} 
+                  desc={'Developer certification representing the skills in the area of using javascript and learning most aspects of the language at a high and deep level'}
+                  link={'https://www.freecodecamp.org/certification/thatlukaszguy/javascript-algorithms-and-data-structures'}
+                  short={'fcc'}
+                  />
+                <Cert 
+                  title={"FreeCodeCamp: Scientific Computing with Python"} 
+                  desc={'Developer certification representing the skills in the area of scripting in python'}
+                  link={'https://www.freecodecamp.org/certification/thatlukaszguy/scientific-computing-with-python-v7'}
+                  short={'fcc'}
+                  />
         </div>
     )
 

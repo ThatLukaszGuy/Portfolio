@@ -38,6 +38,12 @@ export default function Work() {
                       <Text
                         my={2}
                         color="gray.300">
+                        <span className='text-pink-700 italic'>2025</span><span className='font-bold'> - Zebra & Pig (Part Time) - </span> Part Time work as a full stack developer, working both front end and server side with Typescript mainly in the NuxtJS Framework. Additionally helping with building microservices.
+                      </Text>
+                      <Divider />
+                      <Text
+                        my={2}
+                        color="gray.300">
                         <span className='text-pink-700 italic'>2022</span><span className='font-bold'> - Hochtief Polska S.A (Internship) - </span>Familiarization with company&apos;s operations in the fields of accounting and finance
                       </Text>
                       <Divider />
