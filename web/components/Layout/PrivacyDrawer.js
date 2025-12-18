@@ -66,7 +66,7 @@ export default function PrivacyDrawer({ isOpen, onClose,btnRef }) {
                       Name: Łukasz J <br/>
                       Address: Zurich CH <br/>
                       Email: thatlukija@gmail.com <br/>
-                      <span className=' italic text-gray-300'>Based in Swiss</span>
+                      <span className=' italic text-gray-300'>Based in Switzerland</span>
                     </Text>
 
                   </DrawerBody>
