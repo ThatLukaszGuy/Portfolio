@@ -32,7 +32,7 @@
     "react-spinners": "^0.13.8",
     "react-spring": "^9.7.2",
     "sweetalert2": "^11.7.19",
-    "three": "^0.155.0"
+    "three": "^0.159.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
